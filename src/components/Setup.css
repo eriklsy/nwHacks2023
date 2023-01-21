@@ -1,0 +1,11 @@
+#setupbox{
+    position: absolute;
+    width: 70vw;
+    height: 60vh;
+    background-color: #2B2D42;
+    margin: auto;
+    align-items: auto;
+    top: 35%;
+    left: 15%;
+    border-radius: 50px;;
+}
