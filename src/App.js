@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { createContext } from 'react';
-
+import Resturant from "./components/Restaurant"
 const MyContext = React.createContext();
 
 function App() {
