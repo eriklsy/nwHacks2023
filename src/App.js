@@ -1,22 +1,30 @@
-import logo from './logo.svg';
+
 import './App.css';
 import React from 'react';
+import NavButton from './components/NavButton';
+import { useState, useEffect } from 'react';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-          <h2>UI Branch</h2>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div class="container">
+        <div class="navbar">
+          <div class="firstnav">
+            <image src="https://images.squarespace-cdn.com/content/v1/53b839afe4b07ea978436183/1608506169128-S6KYNEV61LEP5MS1UIH4/traditional-food-around-the-world-Travlinmad.jpg"/>
+
+          </div>
+          <NavButton
+            text="About Us"
+            link=""
+          />
+
+
+
+        </div>
+
+
+
+      </div>
     </div>
   );
 }
