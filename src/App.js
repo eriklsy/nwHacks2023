@@ -1,7 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { createContext } from 'react';
+
+const MyContext = React.createContext();
 
 function App() {
+  
+
   return (
     <div className="App">
       <header className="App-header">
@@ -21,5 +26,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
