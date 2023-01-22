@@ -13,14 +13,58 @@ import korean from './pics/korean.jpg';
 import viet from './pics/viet.jpg';
 import burger from './pics/burger.jpg';
 import './imageGrid.css'
+import Setup from './Setup';
+
+
+
+
+function findMode(list) {
+    let frequency = {};
+    for (let num of list) {
+      if (frequency[num]) {
+        frequency[num]++;
+      } else {
+        frequency[num] = 1;
+      }
+    }
+    let maxFrequency = 0;
+    for (let num in frequency) {
+      maxFrequency = Math.max(maxFrequency, frequency[num]);
+    }
+    let mode = [];
+    for (let num in frequency) {
+      if (frequency[num] === maxFrequency) {
+        mode.push(num);
+      }
+    }
+    console.log(mode)
+  }
+  
 
 
 
 
 
+function FoodSelection(props){  
 
-function FoodSelection(){  
+    const [numPeople, setPeople] = useState(5);
+    const value = false;
 
+    const handleReducePerson = (id) =>{
+        setPeople(numPeople - 1)
+        console.log(numPeople);
+    }
+    
+    const [list, setList] = useState([]);
+
+    const handleConcatList = (newList) =>{
+        setList(list.concat(newList))
+        handleEmptyFood();
+        handleReducePerson();
+        console.log(list)
+        findMode(list);
+        props.onList(findMode(list));
+    }
 
 
     
@@ -30,12 +74,18 @@ function FoodSelection(){
         setFood([...listofFoods,id])
         console.log(listofFoods)
     }
+
+    const handleEmptyFood = (id) =>{
+        setFood([]);
+    }
     
   const handleRemoveFood = (id) => {
     setFood(listofFoods.filter(listofFoods => listofFoods !== id));
   }
     return(
         <div className="main">
+        <button class = "button" type = "button" onClick={() => handleConcatList(listofFoods)} >Next Person</button>
+        {/* <Setup value={value} /> */}
         
 
 
