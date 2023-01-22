@@ -113,7 +113,9 @@ function Setup() {
                             <div className='listof'>   
                                 <Tab className="items" >
                                 </Tab>
-                                <Tab className='items'>
+                                <Tab className='items' style={{
+                                    backgroundColor: tabIndex >= 1 ? 'white': '#0F0F0F'
+                                }}>
                                 </Tab>
                                 <Tab className='items' >
                                 </Tab>
