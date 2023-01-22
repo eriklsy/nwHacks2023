@@ -69,36 +69,73 @@ function FoodSelection() {
     let user = [];
     console.log(user);
     return(
-        <div class="main">
-            <div class="row1">
-                <div class = "categ">
-                    <img src = {idc} class="itemselection" onClick={idcHandler()}/>
-                    <p class = "fooddescription">I'm feeling lucky</p></div>
-                <div>
-                <img src = {chinese} class="itemselection" onClick={chineseHandler()}/>
-                    <p class = "fooddescription">Chinese</p></div>
-                <img src = {fast} class="itemselection" onClick={fastHandler()}/>
+        <div className="main">
+
+            <div className="row1">
+                <div className = "categ">
+                    <img src = {idc} className="itemselection" onClick={idcHandler()}/>
+                    <p className = "fooddescription">I'm feeling lucky</p>
+                </div>
+
+                <div className = "categ">
+                    <img src = {chinese} className="itemselection" onClick={chineseHandler()}/>
+                    <p className = "fooddescription">Chinese</p>
+                </div>
+                
+                <div className = "categ">
+                    <img src = {fast} className ="itemselection" onClick={fastHandler()}/>
+                    <p className = "fooddescription">Fast Food</p> 
+                </div>
             </div>
-            <div class="row2">
-                
-                <img src = {korean} class="itemselection" onClick={koreanHandler()}/>
-                <img src = {japanese} class="itemselection" onClick={japaneseHandler()}/>
-                <img src = {indian} class="itemselection" onClick={indianHandler()}/>
-                
+
+            <div className="row2">
+                <div className = "categ">
+                    <img src = {korean} className="itemselection" onClick={koreanHandler()}/>
+                    <p className = "fooddescription">Korean</p>
+                </div>
+
+                <div className = "categ">
+                    <img src = {japanese} class="itemselection" onClick={japaneseHandler()}/>
+                    <p className = "fooddescription">Japanese</p>
+                </div>
+
+                <div className="categ">
+                    <img src = {indian} class="itemselection" onClick={indianHandler()}/>
+                    <p className = "fooddescription">Indian</p>
+                </div>
             </div>
 
             <div class="row3">
-                <img src = {viet} class="itemselection" onClick={vietnameseHandler()}/>
-                <img src = {casual} class="itemselection" onClick={casualHandler()}/>
-                <img src = {italian} class="itemselection" onClick={italianHandler()}/>
+                <div className = "categ">
+                    <img src = {viet} class="itemselection" onClick={vietnameseHandler()}/>
+                    <p className = "fooddescription">Vietnamese</p>
+                </div>
+                <div className = "categ">
+                    <img src = {casual} class="itemselection" onClick={casualHandler()}/>
+                    <p className = "fooddescription">Casual Dining</p>
+                </div>
+                <div className = "categ">
+                    <img src = {italian} class="itemselection" onClick={italianHandler()}/>
+                    <p className= "fooddescription">Italian</p>
+                </div>
             </div>
+
             <div class="row4">
-                <img src = {burger} class="itemselection" onClick={burgerHandler()}/>
-                <img src = {brunch} class="itemselection" onClick={brunchHandler()}/>
-                <img src = {cafe} class="itemselection" onClick={cafeHandler()}/>
+                <div className = "categ">
+                    <img src = {burger} class="itemselection" onClick={burgerHandler()}/>
+                    <p className = "fooddescription">Burger</p>
+                </div>
+                <div className = "categ">
+                    <img src = {brunch} class="itemselection" onClick={brunchHandler()}/>
+                    <p className = "fooddescription">Brunch</p>
+                </div>
+                <div className = "categ">
+                   <img src = {cafe} class="itemselection" onClick={cafeHandler()}/>
+                   <p className = "fooddescription">Cafe</p>
+                </div>
             </div>
         
-        </div>
+    </div>
     )
     
     

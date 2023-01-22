@@ -14,11 +14,14 @@
 .fooddescription{
     text-align: right;
     font-family: 'Open Sans', sans-serif;
-    font-size: 25px;
+    font-size: 28px;
     margin-top: 2px;
+    font-weight: 700;
+    margin-right: 10px;
 }
 .main{
-    
+    display: flex;
+    flex-direction: column;
     height: 80vh;
 }
 .row1{
@@ -32,22 +35,23 @@
 }
 
 .row2{
+    
     flex-direction: row;
     display: flex;
     margin-left: 30px;
-    margin-top: 30px;
+    margin-top: 60vh;
 }
 .row3{
     flex-direction: row;
     display: flex;
     margin-left: 30px;
-    margin-top: 70px;
+    margin-top: 60vh;
 }
 .row4{
     flex-direction: row;
     display: flex;
     margin-left: 30px;
-    margin-top: 70px;
+    margin-top: 60vh;
 }
 
 #chinese{
