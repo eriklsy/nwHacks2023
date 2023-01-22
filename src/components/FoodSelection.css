@@ -1,0 +1,52 @@
+.itemselection{
+    width: 25vw;
+    height: 25vw;
+    background-color: black;
+    display: solid;
+    border-radius: 50px;
+    margin-left: 5vw;
+}
+.main{
+    
+    height: 80vh;
+}
+.row1{
+    top: 15vh;
+    flex-direction: row;
+    display: flex;
+    margin-top: 300px;
+    margin-left: 30px;
+    opacity : 100;
+    
+}
+
+.row2{
+    flex-direction: row;
+    display: flex;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.row3{
+    flex-direction: row;
+    display: flex;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.row4{
+    flex-direction: row;
+    display: flex;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+#chinese{
+    left: 37.5vw;
+}
+
+#idc{
+    left: 67.5vw;
+}
+
+#fast{
+    left: 7.5vw;
+}

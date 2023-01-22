@@ -1,5 +1,4 @@
 #setupbox{
-    position: absolute;
     opacity: 90%;
     width: 70vw;
     height: 60vh;
@@ -7,27 +6,11 @@
     margin: auto;
     align-items: auto;
     top: 35%;
+    position: absolute;
     left: 15%;
     border-radius: 50px;;
 }
-#setu{
-    width: 100vw;
-    height: 100vh;
-}
-#pbar{
-    z-index: 1;
-    height: 500px;
-    position: absolute;
-}
 
-.redbar{
-    position: absolute;
-    width:75vw;
-    height : 240px;
-    background-color: #D90429;
-    top: 300px;
-    opacity: 100;
-}
 
 .dots{
     border-radius: 50%;
@@ -41,21 +24,54 @@
     position: absolute;
     left: 50%;
 }
-#dot2{
-    left: 47%;
+
+#next-button{
+    margin-left: 20px;
+    left: 70%;
+    position: absolute;
+    align: center;
+    top: 75%;
+    width: 10%;
+    height: 10%;
 }
-#dot3{
-    left: 53%;
-}
-#dot4{
-    background-color: black;
-}
-.nextBtn{
+.finalBtn{
     margin-left: 40px;
     left: 90%;
     position: absolute;
-    top:45%;
+    top:85%;
     height: 8%;
     background-size: 0;
     border-radius: 30%;
+}
+.nextBtn:hover{
+    scale: 90%;
+}
+
+.select {
+    position: absolute;
+    left: 43%;
+    width: 10vw;
+    height: 10vw;
+    top: 75%;
+    display: flex;
+    flex-direction: row;
+}
+
+.t {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-color :black;
+    margin-top: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 100%;
+    position: absolute;
+}
+
+.panel {
+    position: absolute;
+    width: 70vw;
+    height: 10vw;
+    top: 50%;
 }
