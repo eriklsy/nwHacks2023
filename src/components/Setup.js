@@ -15,6 +15,9 @@ import {
   } from '@chakra-ui/react'
 
 
+import NumEaters from "./NumEaters";
+
+
 function Setup() {
     const [tabIndex, setTabIndex] = useState(0)
 
@@ -78,7 +81,9 @@ function Setup() {
                         <TabPanels className="alltabs">
                             <TabPanel>
                             <div className='tab1'>
+                                
                                 <h3>
+                                <NumEaters/>
                                     how many eaters?
                                 </h3>
                             </div>
