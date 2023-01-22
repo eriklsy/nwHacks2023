@@ -7,6 +7,8 @@ import poop from './1480289-200.png';
 import { ArrowRightIcon } from '@chakra-ui/icons';
 import { IconButton } from '@chakra-ui/react';
 import FoodSelection from './FoodSelection';
+import MapContainer from "./MapEmbed";
+
 import {
     RangeSlider,
     RangeSliderTrack,
@@ -153,7 +155,7 @@ function Setup() {
                                 <img class="image" src="https://cdn-icons-png.flaticon.com/512/67/67347.png"/>
                                 <button class="button" onClick={handleExactLocation}>Near Me</button>
                                 <img class="image" src="https://media.wired.com/photos/59269cd37034dc5f91bec0f1/191:100/w_1280,c_limit/GoogleMapTA.jpg"/>
-                                <button class="button">Use Map</button>
+                                <button class="button" onClick={handleSliderChange}>Use Map</button>
                                 </div>
                                 <h3>
                                     where are we eating?
@@ -169,7 +171,7 @@ function Setup() {
                             </TabPanel>
                             <TabPanel>
                             <div className='tab4'>
-                                
+                                <MapContainer/>
                             </div>
                             </TabPanel>
                         </TabPanels>

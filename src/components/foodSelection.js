@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import './FoodSelection.css';
 import indian from './pics/india.jpg';
 import brunch from './pics/brunch.jpg';
@@ -12,7 +12,6 @@ import japanese from './pics/japanese.jpg';
 import korean from './pics/korean.jpg';
 import viet from './pics/viet.jpg';
 import burger from './pics/burger.jpg';
-import { useState } from 'react';
 import { Button, ButtonGroup } from '@chakra-ui/react';
 import './imageGrid.css'
 
