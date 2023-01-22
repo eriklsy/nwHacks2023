@@ -119,7 +119,7 @@ function Setup() {
                                             onChange={e => setEaters(e.target.value)}
                                         />
                                         </p>
-                                    how many eaters?
+                                    How many people will be going?
                                 </h3>
                             </div>
                             </TabPanel>
