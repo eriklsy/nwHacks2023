@@ -14,7 +14,7 @@ import viet from './pics/viet.jpg';
 import burger from './pics/burger.jpg';
 import { useState } from 'react';
 import { Button, ButtonGroup } from '@chakra-ui/react';
-
+import "./DistanceBar.css"
 
 
 function idcHandler(){
@@ -65,24 +65,34 @@ function cafeHandler(){
     user.push("cafe");
     console.log(user);
 }
-  
+function user2Handler(){
+    user2.push("black");
+    console.log(user2);
+}
 
 
 
 let user = [];
+let user2 = [];
+
+
+
 function FoodSelection() {
     const [isClicked, setIsClicked] = useState(false);
     const handleClick = () => {
         setIsClicked(!isClicked);
-    }
+}
 
 
-    let user = [];
+   
     console.log(user);
     return(
         <div className="main">
-            <Button marginLeft = "200px" width = "100px" marginTop = "170px" marginBottom = "-240px" colorScheme='blue'>Next Person</Button>
+            <Button onClick = {user2Handler()} marginLeft = "200px" width = "100px" marginTop = "170px" marginBottom = "-240px" colorScheme='blue' >Next Person</Button>
 
+
+
+            <button onClick = {user2Handler()}> HI </button>
             <div className="row1">
                 <div className = "categ" >
                     <img src = {idc} className="itemselection" onClick={idcHandler()} className={isClicked ? 'clicked' : 'itemselection'} 
@@ -93,7 +103,7 @@ function FoodSelection() {
 
                 <div className = "categ">
                 
-                    <img src = {chinese} className="itemselection" onClick={idcHandler()} 
+                    <img src = {chinese} className="itemselection" onClick={chineseHandler()} 
                     />
                     <p className = "fooddescription">Chinese</p>
                 </div>
