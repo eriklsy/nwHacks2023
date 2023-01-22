@@ -112,3 +112,8 @@
   background-size: 0;
   border-radius: 30%;
 }
+
+#logo{
+  width: 100px;
+  height: 100px;
+}
