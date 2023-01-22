@@ -23,6 +23,13 @@ import NumEaters from "./NumEaters";
 function Setup() {
     const[location,setLocation] = useState({});
     let [eaters, setEaters] = useState(1);
+
+    const [listofPrice, setPrice] = useState([]);
+
+    const handleAddPrice = (id) =>{
+        setPrice([...listofPrice,id])
+        console.log(listofPrice)
+    }
     function getLocation(){
         navigator.geolocation.getCurrentPosition(
             (position) => {
@@ -161,16 +168,25 @@ function Setup() {
                     
                                     <Stack textAlign= "center" zIndex = {5} spacing={30} direction={'row'} opacity = "90%" height = "80px">
                                         <div class = "boxList">
-                                            <Checkbox marginTop = "13px" marginRight = "50px" zIndex = {2} colorScheme='red'>
+                                            <Checkbox marginTop = "13px" marginRight = "50px" zIndex = {2} colorScheme='red' onClick={() =>{
+                                                handleAddPrice("0");
+                                            }}>
                                                 $
                                             </Checkbox>
-                                            <Checkbox  marginTop = "13px"  marginRight = "50px" colorScheme='green'>
+                                            
+                                            <Checkbox marginTop = "13px" marginRight = "50px" zIndex = {2} colorScheme='red' onClick={() =>{
+                                                handleAddPrice("1");
+                                            }}>
                                                 $$
                                             </Checkbox>
-                                            <Checkbox  marginTop = "13px"  marginRight = "50px" colorScheme='green'>
+                                            <Checkbox marginTop = "13px" marginRight = "50px" zIndex = {2} colorScheme='red' onClick={() =>{
+                                                handleAddPrice("3");
+                                            }}>
                                                 $$$
                                             </Checkbox>
-                                            <Checkbox marginTop = "13px"  marginRight = "auto" colorScheme='green'>
+                                            <Checkbox marginTop = "13px" marginRight = "50px" zIndex = {2} colorScheme='red' onClick={() =>{
+                                                handleAddPrice("4");
+                                            }}>
                                                 $$$$
                                             </Checkbox>
                                         </div>

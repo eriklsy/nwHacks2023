@@ -33,9 +33,6 @@ function FoodSelection(){
   }
     return(
         <div className="main">
-        
-
-
 
         <div className="row1">
             <div className = "categ" >
