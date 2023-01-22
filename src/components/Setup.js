@@ -2,7 +2,7 @@ import React from "react";
 import './Setup.css';
 import './FoodSelection.css';
 import { Tabs, TabList, TabPanels, Tab, TabPanel, Box, Checkbox, Stack} from '@chakra-ui/react'
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import poop from './1480289-200.png';
 import FoodSelection from './FoodSelection';
 import MapContainer from "./MapEmbed";
@@ -40,6 +40,8 @@ function Setup() {
         console.log(location)
         console.log(markerLocation)
     }
+
+    const [list, setList] = useState([]);
 
     function  submitLocation(){
         handleClick();
@@ -85,17 +87,27 @@ function Setup() {
         setBoxShown(current => !current);
     }
 
-   
+    function showLog(){
+        console.log(list);
+    }
+
+    // const sendData = useCallback(()=>{
+    //     console.log(location)
+    //     setIsShown(false)
+    //     setBoxShown(true)
+    //     setTabIndex(4)
+    //     console.log("list", list)
+    // }, [list])
 
     function sendData(){
         console.log(location)
         setIsShown(false)
         setBoxShown(true)
         setTabIndex(4)
-        console.log(list)
+        console.log("list", list)
     }
 
-    const [list, setList] = useState([]);
+    
 
     return(
         <div>
@@ -241,8 +253,8 @@ function Setup() {
             </div>
             {isShown && 
         <div>
-            <FoodSelection onList={(l)=>setList(l)}/>
-    
+            <FoodSelection onList={(l) => {setList(l); console.log("l", l);}}/>
+
             <div class="findButton">
                 <button id="find" onClick={sendData}>Find a Restaurant</button>
             </div>

@@ -13,10 +13,6 @@ import korean from './pics/korean.jpg';
 import viet from './pics/viet.jpg';
 import burger from './pics/burger.jpg';
 import './imageGrid.css'
-import Setup from './Setup';
-
-
-
 
 function findMode(list) {
     let frequency = {};
@@ -62,8 +58,11 @@ function FoodSelection(props){
         handleEmptyFood();
         handleReducePerson();
         console.log(list)
-        findMode(list);
-        props.onList(findMode(list));
+        var mode = findMode(list);
+        console.log(mode)
+        if (list) {
+            props.onList(list);
+        }
     }
 
 
@@ -84,7 +83,9 @@ function FoodSelection(props){
   }
     return(
         <div className="main">
-        <button class = "button" type = "button" onClick={() => handleConcatList(listofFoods)} >Next Person</button>
+            <div className="nextBB">
+                <button class = "button" id="next" type = "button" onClick={() => handleConcatList(listofFoods)} >Next Person</button>
+            </div>
         {/* <Setup value={value} /> */}
         
 

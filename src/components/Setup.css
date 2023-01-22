@@ -156,6 +156,7 @@ input[type="number"] {
     font-size: 30px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
+    border-radius: 15px;
   }
 
   input[type="number"] {
@@ -185,15 +186,15 @@ input[type="number"] {
 }
 
 .findButton {
-    width: 100%;
+    width: 50%;
     position: absolute;
+    right: 0;
     top: 20vh;
-    left: 0%;
-    align-items: center;
+    align-items: left;
 }
 
 #find {
-    width: 70%;
+    width: 80%;
     text-align: right;
     padding: 20px 25px;
     margin: 0;
@@ -203,10 +204,13 @@ input[type="number"] {
     outline: #0F0F0F;
     outline-style: solid;
     font-size: 16px; 
+    font-weight: 600;
     font-family: 'Open Sans', sans-serif;
+    color:#e8e8e8;
+    background-color: #D90429;
+    transition: 0.1s;
 }
 
 #find:hover {
-    scale: 98%;
-    background-color: #DDDDDD;
+    background-color: #B90429;
 }
