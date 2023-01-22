@@ -1,0 +1,61 @@
+#setupbox{
+    position: absolute;
+    opacity: 90%;
+    width: 70vw;
+    height: 60vh;
+    background-color: #2B2D42;
+    margin: auto;
+    align-items: auto;
+    top: 35%;
+    left: 15%;
+    border-radius: 50px;;
+}
+#setu{
+    width: 100vw;
+    height: 100vh;
+}
+#pbar{
+    z-index: 1;
+    height: 500px;
+    position: absolute;
+}
+
+.redbar{
+    position: absolute;
+    width:75vw;
+    height : 240px;
+    background-color: #D90429;
+    top: 300px;
+    opacity: 100;
+}
+
+.dots{
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-color :white;
+    margin-top: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 100%;
+    position: absolute;
+    left: 50%;
+}
+#dot2{
+    left: 47%;
+}
+#dot3{
+    left: 53%;
+}
+#dot4{
+    background-color: black;
+}
+.nextBtn{
+    margin-left: 40px;
+    left: 90%;
+    position: absolute;
+    top:45%;
+    height: 8%;
+    background-size: 0;
+    border-radius: 30%;
+}
