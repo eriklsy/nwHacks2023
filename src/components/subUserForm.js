@@ -7,6 +7,8 @@ Component Creates a form of checkboxes
 
 import React, { Component, useState } from "react";
 import Checkbox from "./Checkbox";
+import { TagContext } from "./TagContext";
+import DisplayTags from "./DisplayTags";
 
 const OPTIONS = ["Korean", "Chinese"];
 const imgpath = "./images/"
@@ -72,11 +74,17 @@ class SubUserComp extends Component {
       },
      //return this
      
-      console.log(this.state.checkboxes)
-      
+      console.log(this.state.checkboxes),
+      this.state.formData = this.state.checkboxes,
+     // {formData} = this.state.checkboxes
+      <TagContext.Provider value={this.state.formData}>
+        <DisplayTags/>
+      </TagContext.Provider>
+
       );
       this.value=null;
       //console.log({ formData })
+      
   };
  
   createCheckbox = option => (
