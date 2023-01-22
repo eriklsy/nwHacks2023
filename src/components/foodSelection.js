@@ -14,167 +14,218 @@ import viet from './pics/viet.jpg';
 import burger from './pics/burger.jpg';
 import { useState } from 'react';
 import { Button, ButtonGroup } from '@chakra-ui/react';
-import "./DistanceBar.css"
-
-
-function idcHandler(){
-    user.push("idc");
-    console.log(user);
-}
-function chineseHandler(){
-    user.push("chinese");
-    console.log(user);
-}
-function fastHandler(){
-    user.push("fast");
-    console.log(user);
-}
-function koreanHandler(){
-    user.push("korean");
-    console.log(user);
-}
-function japaneseHandler(){
-    user.push("japanese");
-    console.log(user);
-}
-function indianHandler(){
-    user.push("indian");
-    console.log(user);
-}
-function vietnameseHandler(){
-    user.push("viet");
-    console.log(user);
-}
-function casualHandler(){
-    user.push("casualDining");
-    console.log(user);
-}
-function italianHandler(){
-    user.push("italian");
-    console.log(user);
-}
-function burgerHandler(){
-    user.push("burger");
-    console.log(user);
-}
-function brunchHandler(){
-    user.push("brunch");
-    console.log(user);
-}
-function cafeHandler(){
-    user.push("cafe");
-    console.log(user);
-}
-function user2Handler(){
-    user2.push("black");
-    console.log(user2);
-}
+import './imageGrid.css'
 
 
 
-let user = [];
-let user2 = [];
 
 
 
-function FoodSelection() {
-    const [isClicked, setIsClicked] = useState(false);
-    const handleClick = () => {
-        setIsClicked(!isClicked);
-}
+function FoodSelection(){  
+    const [listofFoods, setFood] = useState([]);
 
-
-   
-    console.log(user);
+    const handleAddFood = (id) =>{
+        setFood([...listofFoods,id])
+        console.log(listofFoods)
+    }
+    
+  const handleRemoveFood = (id) => {
+    setFood(listofFoods.filter(listofFoods => listofFoods !== id));
+  }
     return(
         <div className="main">
-            <Button onClick = {user2Handler()} marginLeft = "200px" width = "100px" marginTop = "170px" marginBottom = "-240px" colorScheme='blue' >Next Person</Button>
-
-
-
-            <button onClick = {user2Handler()}> HI </button>
-            <div className="row1">
-                <div className = "categ" >
-                    <img src = {idc} className="itemselection" onClick={idcHandler()} className={isClicked ? 'clicked' : 'itemselection'} 
-                    onClick={handleClick}/>
-                    
-                    <p className = "fooddescription">I'm feeling lucky</p>
-                </div>
-
-                <div className = "categ">
-                
-                    <img src = {chinese} className="itemselection" onClick={chineseHandler()} 
-                    />
-                    <p className = "fooddescription">Chinese</p>
-                </div>
-                
-                <div className = "categ">
-                    <img src = {fast} className ="itemselection" onClick={fastHandler()}/>
-                    <p className = "fooddescription">Fast Food</p> 
-                </div>
-            </div>
-
-            <div className="row2">
-                <div className = "categ">
-           
-                    <img src = {korean} className="itemselection" onClick={koreanHandler()}/>
-                    <p className = "fooddescription">Korean</p>
-                </div>
-
-                <div className = "categ">
-                
-                    <img src = {japanese} class="itemselection" onClick={japaneseHandler()}/>
-                    <p className = "fooddescription">Japanese</p>
-                </div>
-
-                <div className="categ">
-                
-                    <img src = {indian} class="itemselection" onClick={indianHandler()}/>
-                    <p className = "fooddescription">Indian</p>
-                </div>
-            </div>
-
-            <div class="row3">
-                <div className = "categ">
-                
-                    <img src = {viet} class="itemselection" onClick={vietnameseHandler()}/>
-                    <p className = "fooddescription">Vietnamese</p>
-                </div>
-                <div className = "categ">
-                
-                    <img src = {casual} class="itemselection" onClick={casualHandler()}/>
-                    <p className = "fooddescription">Casual Dining</p>
-                </div>
-                <div className = "categ">
-                
-                    <img src = {italian} class="itemselection" onClick={italianHandler()}/>
-                    <p className= "fooddescription">Italian</p>
-                </div>
-            </div>
-
-            <div class="row4">
-                <div className = "categ">
-                
-                    <img src = {burger} class="itemselection" onClick={burgerHandler()}/>
-                    <p className = "fooddescription">Burger</p>
-                </div>
-                <div className = "categ">
-                
-                    <img src = {brunch} class="itemselection" onClick={brunchHandler()}/>
-                    <p className = "fooddescription">Brunch</p>
-                </div>
-                <div className = "categ">
-                
-                   <img src = {cafe} class="itemselection" onClick={cafeHandler()}/>
-                   <p className = "fooddescription">Cafe</p>
-                </div>
-            </div>
         
-    </div>
-    )
-    
-    
-}
 
+
+
+        <div className="row1">
+            <div className = "categ" >
+                <img src = {idc} className="itemselection" onClick={() =>{
+                    if(listofFoods.includes("idc")){
+                        handleRemoveFood("idc");
+                    }else{
+                        handleAddFood("idc");
+                    }
+                }}
+                style={{
+                    border: listofFoods.includes("idc") ? '5px solid green' : 'none'
+                  }}/>
+                
+                <p className = "fooddescription">I'm feeling lucky</p>
+            </div>
+
+            <div className = "categ">
+            
+                <img src = {chinese} className="itemselection" onClick={() =>{
+                    if(listofFoods.includes("Chinese")){
+                        handleRemoveFood("Chinese");
+                    }else{
+                        handleAddFood("Chinese");
+                    }
+                }} 
+                style={{
+                    border: listofFoods.includes("Chinese") ? '5px solid green' : 'none'
+                  }}
+                />
+                <p className = "fooddescription">Chinese</p>
+            </div>
+            
+            <div className = "categ">
+                <img src = {fast} className ="itemselection" onClick={() =>{
+                    if(listofFoods.includes("Fastfood")){
+                        handleRemoveFood("Fastfood");
+                    }else{
+                        handleAddFood("Fastfood");
+                    }
+                }}
+                style={{
+                    border: listofFoods.includes("Fastfood") ? '5px solid green' : 'none'
+                  }} />
+                <p className = "fooddescription">Fast Food</p> 
+            </div>
+        </div>
+
+        <div className="row2">
+            <div className = "categ">
+       
+                <img src = {korean} className="itemselection" onClick={() =>{
+                    if(listofFoods.includes("Korean")){
+                        handleRemoveFood("Korean");
+                    }else{
+                        handleAddFood("Korean");
+                    }
+                }} 
+                style={{
+                    border: listofFoods.includes("Korean") ? '5px solid green' : 'none'
+                  }}/>
+                <p className = "fooddescription">Korean</p>
+            </div>
+
+            <div className = "categ">
+            
+                <img src = {japanese} class="itemselection" onClick={() =>{
+                    if(listofFoods.includes("Japanese")){
+                        handleRemoveFood("Japanese");
+                    }else{
+                        handleAddFood("Japanese");
+                    }
+                }} 
+                style={{
+                    border: listofFoods.includes("Japanese") ? '5px solid green' : 'none'
+                  }}/>
+                <p className = "fooddescription">Japanese</p>
+            </div>
+
+            <div className="categ">
+            
+                <img src = {indian} class="itemselection" onClick={() =>{
+                    if(listofFoods.includes("Indian")){
+                        handleRemoveFood("Indian");
+                    }else{
+                        handleAddFood("Indian");
+                    }
+                }} 
+                style={{
+                    border: listofFoods.includes("Indian") ? '5px solid green' : 'none'
+                  }}/>
+                <p className = "fooddescription">Indian</p>
+            </div>
+        </div>
+
+        <div class="row3">
+            <div className = "categ">
+            
+                <img src = {viet} class="itemselection" onClick={() =>{
+                    if(listofFoods.includes("Vietnamese")){
+                        handleRemoveFood("Vietnamese");
+                    }else{
+                        handleAddFood("Vietnamese");
+                    }
+                }} 
+                style={{
+                    border: listofFoods.includes("Vietnamese") ? '5px solid green' : 'none'
+                  }}/>
+                <p className = "fooddescription">Vietnamese</p>
+            </div>
+            <div className = "categ">
+            
+                <img src = {casual} class="itemselection"onClick={() =>{
+                    if(listofFoods.includes("Casual")){
+                        handleRemoveFood("Casual");
+                    }else{
+                        handleAddFood("Casual");
+                    }
+                }}
+                style={{
+                    border: listofFoods.includes("Casual") ? '5px solid green' : 'none'
+                  }} />
+                <p className = "fooddescription">Casual Dining</p>
+            </div>
+            <div className = "categ">
+            
+                <img src = {italian} class="itemselection" onClick={() =>{
+                    if(listofFoods.includes("Italian")){
+                        handleRemoveFood("Italian");
+                    }else{
+                        handleAddFood("Italian");
+                    }
+                }} 
+                style={{
+                    border: listofFoods.includes("Italian") ? '5px solid green' : 'none'
+                  }}/>
+                <p className= "fooddescription">Italian</p>
+            </div>
+        </div>
+
+        <div class="row4">
+            <div className = "categ">
+            
+                <img src = {burger} class="itemselection" onClick={() =>{
+                    if(listofFoods.includes("Burger")){
+                        handleRemoveFood("Burger");
+                    }else{
+                        handleAddFood("Burger");
+                    }
+                }}
+                style={{
+                    border: listofFoods.includes("Burger") ? '5px solid green' : 'none'
+                  }} />
+                <p className = "fooddescription">Burger</p>
+            </div>
+            <div className = "categ">
+            
+                <img src = {brunch} class="itemselection"onClick={() =>{
+                    if(listofFoods.includes("Brunch")){
+                        handleRemoveFood("Brunch");
+                    }else{
+                        handleAddFood("Brunch");
+                    }
+                }} 
+                style={{
+                    border: listofFoods.includes("Brunch") ? '5px solid green' : 'none'
+                  }}/>
+                <p className = "fooddescription">Brunch</p>
+            </div>
+            <div className = "categ">
+            
+               <img src = {cafe} class="itemselection" onClick={() =>{
+                    if(listofFoods.includes("Cafe")){
+                        handleRemoveFood("Cafe");
+                    }else{
+                        handleAddFood("Cafe");
+                    }
+                }} 
+                style={{
+                    border: listofFoods.includes("Cafe") ? '5px solid green' : 'none'
+                  }}/>
+               <p className = "fooddescription">Cafe</p>
+            </div>
+        </div>
+    
+</div>
+);
+}
+  
+    
 
 export default FoodSelection;
