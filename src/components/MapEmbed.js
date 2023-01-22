@@ -5,14 +5,14 @@ const mapStyles = {
   width: '100%',
   height: '50%'
 };
-const latitude = 0;
-const longitude = 0;
+const latitude = 49.2606;
+const longitude = 123.2460;
 export class MapContainer extends Component {
   componentDidMount() {
     navigator.geolocation.getCurrentPosition(
       function(position) {
       latitude = position.coords.latitude;
-      longitude = position.coords.longitude;
+      longitude = position.coords.longitude
     },
     function(error){
       console.error("Error code =" +error.code +  error.msesage);

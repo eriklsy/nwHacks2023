@@ -2,12 +2,13 @@ import logo from './logo.svg';
 import './App.css';
 import React, { createContext } from 'react';
 import MapEmbed from './components/MapEmbed';
-import LocationButton from './components/LocationButton';
+import ApproximateButton from './components/ApproximateButton';
+
 function App() {
   
 
   return (
-        <LocationButton/>
+        <ApproximateButton/>
   );
 }
 
