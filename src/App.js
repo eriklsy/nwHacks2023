@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react';
 import Setup from './components/Setup';
 
-import FoodSelection from './components/foodSelection';
+import FoodSelection from './components/FoodSelection';
 import { useState, useEffect } from 'react';
 import logo from './assets/Time.png';
 import { IconButton } from '@chakra-ui/react';

@@ -6,7 +6,7 @@ import { useState } from 'react';
 import poop from './1480289-200.png';
 import { ArrowRightIcon } from '@chakra-ui/icons';
 import { IconButton } from '@chakra-ui/react';
-import FoodSelection from './foodSelection';
+import FoodSelection from './FoodSelection';
 import {
     RangeSlider,
     RangeSliderTrack,
