@@ -12,7 +12,6 @@ import japanese from './pics/japanese.jpg';
 import korean from './pics/korean.jpg';
 import viet from './pics/viet.jpg';
 import burger from './pics/burger.jpg';
-import { Button, ButtonGroup } from '@chakra-ui/react';
 import './imageGrid.css'
 
 
@@ -52,7 +51,7 @@ function FoodSelection(){
                 }}
                 style={{
                     border: listofFoods.includes("idc") ? '5px solid green' : 'none'
-                  }}/>
+                  }} alt="image1"/>
                 
                 <p className = "fooddescription">I'm feeling lucky</p>
             </div>
@@ -68,7 +67,7 @@ function FoodSelection(){
                 }} 
                 style={{
                     border: listofFoods.includes("Chinese") ? '5px solid green' : 'none'
-                  }}
+                  }} alt="image2"
                 />
                 <p className = "fooddescription">Chinese</p>
             </div>
@@ -83,7 +82,7 @@ function FoodSelection(){
                 }}
                 style={{
                     border: listofFoods.includes("Fastfood") ? '5px solid green' : 'none'
-                  }} />
+                  }} alt="image3"/>
                 <p className = "fooddescription">Fast Food</p> 
             </div>
         </div>
@@ -100,7 +99,7 @@ function FoodSelection(){
                 }} 
                 style={{
                     border: listofFoods.includes("Korean") ? '5px solid green' : 'none'
-                  }}/>
+                  }} alt="image4"/>
                 <p className = "fooddescription">Korean</p>
             </div>
 
@@ -115,7 +114,7 @@ function FoodSelection(){
                 }} 
                 style={{
                     border: listofFoods.includes("Japanese") ? '5px solid green' : 'none'
-                  }}/>
+                  }} alt="image5"/>
                 <p className = "fooddescription">Japanese</p>
             </div>
 
@@ -130,7 +129,7 @@ function FoodSelection(){
                 }} 
                 style={{
                     border: listofFoods.includes("Indian") ? '5px solid green' : 'none'
-                  }}/>
+                  }} alt="image6"/>
                 <p className = "fooddescription">Indian</p>
             </div>
         </div>
@@ -147,7 +146,7 @@ function FoodSelection(){
                 }} 
                 style={{
                     border: listofFoods.includes("Vietnamese") ? '5px solid green' : 'none'
-                  }}/>
+                  }} alt="image7"/>
                 <p className = "fooddescription">Vietnamese</p>
             </div>
             <div className = "categ">
@@ -161,7 +160,7 @@ function FoodSelection(){
                 }}
                 style={{
                     border: listofFoods.includes("Casual") ? '5px solid green' : 'none'
-                  }} />
+                  }} alt="image8"/>
                 <p className = "fooddescription">Casual Dining</p>
             </div>
             <div className = "categ">
@@ -175,7 +174,7 @@ function FoodSelection(){
                 }} 
                 style={{
                     border: listofFoods.includes("Italian") ? '5px solid green' : 'none'
-                  }}/>
+                  }} alt="image9"/>
                 <p className= "fooddescription">Italian</p>
             </div>
         </div>
@@ -192,7 +191,7 @@ function FoodSelection(){
                 }}
                 style={{
                     border: listofFoods.includes("Burger") ? '5px solid green' : 'none'
-                  }} />
+                  }} alt="image10"/>
                 <p className = "fooddescription">Burger</p>
             </div>
             <div className = "categ">
@@ -206,7 +205,7 @@ function FoodSelection(){
                 }} 
                 style={{
                     border: listofFoods.includes("Brunch") ? '5px solid green' : 'none'
-                  }}/>
+                  }} alt="image11"/>
                 <p className = "fooddescription">Brunch</p>
             </div>
             <div className = "categ">
@@ -220,7 +219,7 @@ function FoodSelection(){
                 }} 
                 style={{
                     border: listofFoods.includes("Cafe") ? '5px solid green' : 'none'
-                  }}/>
+                  }} alt="image12"/>
                <p className = "fooddescription">Cafe</p>
             </div>
         </div>
