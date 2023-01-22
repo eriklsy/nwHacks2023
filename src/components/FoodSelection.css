@@ -5,6 +5,17 @@
     display: solid;
     border-radius: 50px;
     margin-left: 5vw;
+    object-fit: cover;
+}
+
+.categ{
+    height: 00px;
+}
+.fooddescription{
+    text-align: right;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    margin-top: 2px;
 }
 .main{
     
@@ -30,13 +41,13 @@
     flex-direction: row;
     display: flex;
     margin-left: 30px;
-    margin-top: 30px;
+    margin-top: 70px;
 }
 .row4{
     flex-direction: row;
     display: flex;
     margin-left: 30px;
-    margin-top: 30px;
+    margin-top: 70px;
 }
 
 #chinese{

@@ -1,5 +1,17 @@
 import React from "react";
 import './FoodSelection.css';
+import indian from './pics/india.jpg';
+import brunch from './pics/brunch.jpg';
+import cafe from './pics/cafe.jpg';
+import casual from './pics/casual.jpg';
+import chinese from './pics/chinese.jpg';
+import fast from './pics/fast.jpg';
+import italian from './pics/italian.jpg';
+import idc from './pics/idc.jpg';
+import japanese from './pics/japanese.jpg';
+import korean from './pics/korean.jpg';
+import viet from './pics/viet.jpg';
+import burger from './pics/burger.jpg';
 
 
 
@@ -59,42 +71,31 @@ function FoodSelection() {
     return(
         <div class="main">
             <div class="row1">
-                <div class="itemselection" onClick={idcHandler()} id="idc">
-                </div>
-                <div class="itemselection" onClick={chineseHandler()} id="chinese">
-                
-                </div>
-                <div class="itemselection" onClick={fastHandler()} id="fast">
-                </div>
+                <div class = "categ">
+                    <img src = {idc} class="itemselection" onClick={idcHandler()}/>
+                    <p class = "fooddescription">I'm feeling lucky</p></div>
+                <div>
+                <img src = {chinese} class="itemselection" onClick={chineseHandler()}/>
+                    <p class = "fooddescription">Chinese</p></div>
+                <img src = {fast} class="itemselection" onClick={fastHandler()}/>
             </div>
             <div class="row2">
-                <div class="itemselection" id="korean" onClick={koreanHandler()}>
-                </div>
-                <div class="itemselection" onClick={japaneseHandler()} id="japanese">
-                </div>
-                <div class="itemselection" onClick={indianHandler()} id="indian">
                 
-                </div>
+                <img src = {korean} class="itemselection" onClick={koreanHandler()}/>
+                <img src = {japanese} class="itemselection" onClick={japaneseHandler()}/>
+                <img src = {indian} class="itemselection" onClick={indianHandler()}/>
+                
             </div>
 
             <div class="row3">
-                <div class="itemselection"  onClick={vietnameseHandler()} id="vietnamese">
-                </div>
-                <div class="itemselection" onClick={casualHandler()} id="casual dining">
-                
-                </div>
-                <div class="itemselection" onClick={italianHandler()} id="italian">
-            
-                </div>
+                <img src = {viet} class="itemselection" onClick={vietnameseHandler()}/>
+                <img src = {casual} class="itemselection" onClick={casualHandler()}/>
+                <img src = {italian} class="itemselection" onClick={italianHandler()}/>
             </div>
             <div class="row4">
-                <div class="itemselection" onClick={burgerHandler()} id="burger">
-                </div>
-                <div class="itemselection" onClick={brunchHandler()} id="brunch">
-            
-                </div>
-                <div class="itemselection" onClick={cafeHandler()} id="cafe">
-                </div>
+                <img src = {burger} class="itemselection" onClick={burgerHandler()}/>
+                <img src = {brunch} class="itemselection" onClick={brunchHandler()}/>
+                <img src = {cafe} class="itemselection" onClick={cafeHandler()}/>
             </div>
         
         </div>
