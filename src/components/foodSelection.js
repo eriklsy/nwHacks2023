@@ -14,34 +14,33 @@ import viet from './pics/viet.jpg';
 import burger from './pics/burger.jpg';
 import './imageGrid.css'
 
-function findMode(list) {
-    let frequency = {};
-    for (let num of list) {
-      if (frequency[num]) {
-        frequency[num]++;
-      } else {
-        frequency[num] = 1;
-      }
+function findMode(arr) {
+    var modeMap = {};
+    var maxEl = arr[0], maxCount = 1;
+    for(var i = 0; i < arr.length; i++)
+    {
+        var el = arr[i];
+        if(modeMap[el] == null)
+            modeMap[el] = 1;
+        else
+            modeMap[el]++;
+        if(modeMap[el] > maxCount)
+        {
+            maxEl = el;
+            maxCount = modeMap[el];
+        }
     }
-    let maxFrequency = 0;
-    for (let num in frequency) {
-      maxFrequency = Math.max(maxFrequency, frequency[num]);
-    }
-    let mode = [];
-    for (let num in frequency) {
-      if (frequency[num] === maxFrequency) {
-        mode.push(num);
-      }
-    }
-    console.log(mode)
-  }
-  
+    return [maxEl];
+    console.log(maxEl);
+}
 
 
 
 
 
-function FoodSelection(props){  
+
+
+function FoodSelection(props){
 
     const [numPeople, setPeople] = useState(5);
     const value = false;
@@ -50,7 +49,7 @@ function FoodSelection(props){
         setPeople(numPeople - 1)
         console.log(numPeople);
     }
-    
+
     const [list, setList] = useState([]);
 
     const handleConcatList = (newList) =>{
@@ -59,10 +58,8 @@ function FoodSelection(props){
         handleReducePerson();
         console.log(list)
         var mode = findMode(list);
-        console.log(mode)
-        if (list) {
-            props.onList(list);
-        }
+        console.log(mode);
+        props.onList(mode);
     }
 
 
@@ -84,7 +81,7 @@ function FoodSelection(props){
     return(
         <div className="main">
             <div className="nextBB">
-                <button class = "button" id="next" type = "button" onClick={() => handleConcatList(listofFoods)} >Next Person</button>
+                <button className= "button" id="next" type = "button" onClick={() => handleConcatList(listofFoods)} >Next Person</button>
             </div>
         {/* <Setup value={value} /> */}
         
@@ -156,7 +153,7 @@ function FoodSelection(props){
 
             <div className = "categ">
             
-                <img src = {japanese} class="itemselection" onClick={() =>{
+                <img src = {japanese} className="itemselection" onClick={() =>{
                     if(listofFoods.includes("Japanese")){
                         handleRemoveFood("Japanese");
                     }else{
@@ -171,7 +168,7 @@ function FoodSelection(props){
 
             <div className="categ">
             
-                <img src = {indian} class="itemselection" onClick={() =>{
+                <img src = {indian} className="itemselection" onClick={() =>{
                     if(listofFoods.includes("Indian")){
                         handleRemoveFood("Indian");
                     }else{
@@ -185,10 +182,10 @@ function FoodSelection(props){
             </div>
         </div>
 
-        <div class="row3">
+        <div className="row3">
             <div className = "categ">
             
-                <img src = {viet} class="itemselection" onClick={() =>{
+                <img src = {viet} className="itemselection" onClick={() =>{
                     if(listofFoods.includes("Vietnamese")){
                         handleRemoveFood("Vietnamese");
                     }else{
@@ -202,7 +199,7 @@ function FoodSelection(props){
             </div>
             <div className = "categ">
             
-                <img src = {casual} class="itemselection"onClick={() =>{
+                <img src = {casual} className="itemselection"onClick={() =>{
                     if(listofFoods.includes("Casual")){
                         handleRemoveFood("Casual");
                     }else{
@@ -216,7 +213,7 @@ function FoodSelection(props){
             </div>
             <div className = "categ">
             
-                <img src = {italian} class="itemselection" onClick={() =>{
+                <img src = {italian} className="itemselection" onClick={() =>{
                     if(listofFoods.includes("Italian")){
                         handleRemoveFood("Italian");
                     }else{
@@ -230,10 +227,10 @@ function FoodSelection(props){
             </div>
         </div>
 
-        <div class="row4">
+        <div className="row4">
             <div className = "categ">
             
-                <img src = {burger} class="itemselection" onClick={() =>{
+                <img src = {burger} className="itemselection" onClick={() =>{
                     if(listofFoods.includes("Burger")){
                         handleRemoveFood("Burger");
                     }else{
@@ -247,7 +244,7 @@ function FoodSelection(props){
             </div>
             <div className = "categ">
             
-                <img src = {brunch} class="itemselection"onClick={() =>{
+                <img src = {brunch} className="itemselection"onClick={() =>{
                     if(listofFoods.includes("Brunch")){
                         handleRemoveFood("Brunch");
                     }else{
@@ -261,7 +258,7 @@ function FoodSelection(props){
             </div>
             <div className = "categ">
             
-               <img src = {cafe} class="itemselection" onClick={() =>{
+               <img src = {cafe} className="itemselection" onClick={() =>{
                     if(listofFoods.includes("Cafe")){
                         handleRemoveFood("Cafe");
                     }else{

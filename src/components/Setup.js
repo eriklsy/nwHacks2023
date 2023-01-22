@@ -5,8 +5,8 @@ import { Tabs, TabList, TabPanels, Tab, TabPanel, Box, Checkbox, Stack} from '@c
 import { useState, useCallback } from 'react';
 import poop from './1480289-200.png';
 import FoodSelection from './FoodSelection';
-import MapContainer from "./MapEmbed";
-
+// import MapContainer from "./MapEmbed";
+import GoogleRestaurant from "./GoogleRestaurant";
 import "./DistanceBar.css"
 
 import "./NumEaters";
@@ -171,7 +171,7 @@ function Setup() {
                             <TabPanel borderRadius = "50%" marginBottom = "-10px">
                             <div className='tab1' >
                                 
-                                <h3 class = "inputArea">
+                                <h3 className = "inputArea">
                                         <p id = "numberDial">
 
                                         <input
@@ -191,7 +191,7 @@ function Setup() {
                                 <div className="checklist">
                     
                                     <Stack textAlign= "center" zIndex = {5} spacing={30} direction={'row'} opacity = "90%" height = "80px">
-                                        <div class = "boxList">
+                                        <div className = "boxList">
                                             <Checkbox marginTop = "13px" marginRight = "50px" zIndex = {2} colorScheme='red'>
                                                 $
                                             </Checkbox>
@@ -217,11 +217,11 @@ function Setup() {
                                 <div className="tab3container">
                                     <div className="tab3column">
                                         <img className= "image" id="near" src="https://cdn-icons-png.flaticon.com/512/67/67347.png" alt="near me"/>
-                                        <button class="tab3button" onClick={handleExactLocation}>Near Me</button>
+                                        <button className="tab3button" onClick={handleExactLocation}>Near Me</button>
                                     </div>
                                     <div className="tab3column">
                                         <img className="image" id="map" src="https://media.wired.com/photos/59269cd37034dc5f91bec0f1/191:100/w_1280,c_limit/GoogleMapTA.jpg" alt="google maps"/>
-                                        <button class="tab3button" onClick={handleSliderChange}>Use Map</button>
+                                        <button className="tab3button" onClick={handleSliderChange}>Use Map</button>
                                     </div>
                                 </div>
                                 <h3>
@@ -234,14 +234,22 @@ function Setup() {
                             </TabPanel>
                             <TabPanel>
                             <div className='tab4'>
-                                <MapContainer/>
-                                <button class="tab3button" onClick={submitLocation} >Select Location</button>
+                                {/* <MapContainer/> */}
+                                <button className="tab3button" onClick={submitLocation} >Select Location</button>
                             </div>
                             </TabPanel>
                             <TabPanel>
                             <div className='tab5'>
                                 <h3>
                                     Restaurant:
+                                    {
+                                        tabIndex == 4 &&
+                                        <GoogleRestaurant 
+                                            latitude = {location.lat}
+                                            longitude = {location.lng}
+                                            food = {list}
+                                        />
+                                    }
                                 </h3>
                             </div>
                             </TabPanel>
@@ -255,7 +263,7 @@ function Setup() {
         <div>
             <FoodSelection onList={(l) => {setList(l); console.log("l", l);}}/>
 
-            <div class="findButton">
+            <div className="findButton">
                 <button id="find" onClick={sendData}>Find a Restaurant</button>
             </div>
             
