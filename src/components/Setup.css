@@ -129,6 +129,11 @@
     margin: 30px 0;
 }
 
+.tab3button:hover {
+    background-color: #B90429;
+    border-color: #B90429;
+}
+
 .tab3column {
     display: flex;
     flex-direction: column;
