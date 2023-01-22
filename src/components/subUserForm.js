@@ -79,7 +79,8 @@ class SubUserComp extends Component {
      // {formData} = this.state.checkboxes
       <TagContext.Provider value={this.state.formData}>
         <DisplayTags/>
-      </TagContext.Provider>
+      </TagContext.Provider>,
+      console.log("after")
 
       );
       this.value=null;

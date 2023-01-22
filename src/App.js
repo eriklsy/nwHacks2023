@@ -22,7 +22,8 @@ function App() {
        <p>{tags}</p>
 
        <button onClick={function() {addTags(
-          tags.push("bob")
+          tags.push("bob"),
+          console.log(tags)
           )}}>Click me</button>
 
         <p>

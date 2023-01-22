@@ -4,12 +4,15 @@ import { TagContext } from "./TagContext";
 class DisplayTags extends Component{
     render() {
         return (
+            console.log("hi"),
           <TagContext.Consumer>
             {(context) => (
                 <React.Fragment>
                     <p> Tags: {context.formData}</p>
-                </React.Fragment>
+                </React.Fragment>,
+                console.log(context.tags)
             )}
+            
           </TagContext.Consumer>
         );
       }
