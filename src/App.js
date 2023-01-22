@@ -1,29 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
-import React, { createContext } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import SubUserComp from './components/subUserForm';
+import { TagContext } from './components/TagContext';
 
-const MyContext = React.createContext();
 
 function App() {
   
+  let [tags, addTags] = useState([]);
+
+  useEffect(() => {
+    <TagContext.useEffect>
+      
+    </TagContext.useEffect>
+    
+  }, [tags])
 
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+       <p>Tags Collected: {tags}</p>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          
           <SubUserComp/>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      
       </header>
     </div>
   );
