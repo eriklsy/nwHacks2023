@@ -145,3 +145,30 @@ input[type="number"] {
     margin-left: auto;
     margin-right: auto;
 }
+
+.findButton {
+    width: 100%;
+    position: absolute;
+    top: 20vh;
+    left: 0%;
+    align-items: center;
+}
+
+#find {
+    width: 70%;
+    text-align: right;
+    padding: 20px 25px;
+    margin: 0;
+    border: #1F1F1F;
+    border-radius: 30px;
+    height: 60px;
+    outline: #0F0F0F;
+    outline-style: solid;
+    font-size: 16px; 
+    font-family: 'Open Sans', sans-serif;
+}
+
+#find:hover {
+    scale: 98%;
+    background-color: #DDDDDD;
+}

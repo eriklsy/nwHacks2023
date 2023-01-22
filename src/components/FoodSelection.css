@@ -25,7 +25,6 @@
     height: 80vh;
 }
 .row1{
-    top: 15vh;
     flex-direction: row;
     display: flex;
     margin-top: 300px;

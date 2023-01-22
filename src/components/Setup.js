@@ -43,6 +43,7 @@ function Setup() {
         console.log(location)
     }
 
+
     const handleSliderChange = (event) => {
         if (tabIndex != 0 ) {
             setTabIndex((tabIndex + 1)%4);
@@ -58,6 +59,7 @@ function Setup() {
             console.log(showPoop)
             console.log(eaters);
             setTabIndex((tabIndex + 1)%4);
+           
             console.log(tabIndex);
         }
         
@@ -82,15 +84,20 @@ function Setup() {
     }
 
 
+
     let elementStyle = {};
     if (!showBox) {
     elementStyle = { display: 'none' };
   }
+   function sendData(){
+    console.log(location)
+   }
 
     return(
         <div>
             <div style={!showBox ? {display: 'none'} : {}}>
             <Box id="setupbox">
+                
             
                  <div
                  >
@@ -118,13 +125,13 @@ function Setup() {
                     index={tabIndex}>
                         <TabList>
                             <div className='listof'>   
-                                <Tab className="items">
+                                <Tab className="items" >
                                 </Tab>
                                 <Tab className='items'>
                                 </Tab>
-                                <Tab className='items'>
+                                <Tab className='items' >
                                 </Tab>
-                                <Tab className='items'>
+                                <Tab className='items' >
                                 </Tab>
                             </div>
                         </TabList>
@@ -200,9 +207,14 @@ function Setup() {
                 </div>
                  </Box>
             </div>
-        {isShown && <FoodSelection/>}
+        {isShown && 
+        <div>
+            <FoodSelection/>
+            <div class="findButton">
+                <button id="find" onClick={sendData}>Find a Restaurant</button>
+            </div>
+        </div>}
         </div>
-        
     );
 }
 
