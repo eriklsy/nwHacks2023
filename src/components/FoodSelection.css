@@ -1,0 +1,80 @@
+.itemselection, .clicked{
+    width: 25vw;
+    height: 25vw;
+    background-color: black;
+    display: solid;
+    border-radius: 50px;
+    margin-left: 5vw;
+    object-fit: cover;
+}
+
+.categ{
+    height: 00px;
+}
+.fooddescription{
+    text-align: right;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 28px;
+    margin-top: 2px;
+    font-weight: 700;
+    margin-right: 10px;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+}
+.row1{
+    top: 15vh;
+    flex-direction: row;
+    display: flex;
+    margin-top: 300px;
+    margin-left: 30px;
+    opacity : 100;
+    
+}
+
+.row2{
+    
+    flex-direction: row;
+    display: flex;
+    margin-left: 30px;
+    margin-top: 60vh;
+}
+.row3{
+    flex-direction: row;
+    display: flex;
+    margin-left: 30px;
+    margin-top: 60vh;
+}
+.row4{
+    flex-direction: row;
+    display: flex;
+    margin-left: 30px;
+    margin-top: 60vh;
+}
+
+
+#chinese{
+    left: 37.5vw;
+}
+
+#idc{
+    left: 67.5vw;
+
+}
+
+.clicked{
+    outline-style: solid;
+    outline-width: 10px;
+    outline-color : #D90429;
+}
+
+
+#fast{
+    left: 7.5vw;
+}
+
+#nextper{
+    width : 40px;
+}
