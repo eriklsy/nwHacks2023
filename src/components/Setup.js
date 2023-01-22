@@ -1,13 +1,23 @@
 import React from "react";
 import './Setup.css';
 import './FoodSelection.css';
-import { Tabs, TabList, TabPanels, Tab, TabPanel, Box } from '@chakra-ui/react'
+import { Tabs, TabList, TabPanels, Tab, TabPanel, Box, Checkbox, CheckboxGroup, Stack} from '@chakra-ui/react'
 import { useState } from 'react';
 import poop from './1480289-200.png';
 import { ArrowRightIcon } from '@chakra-ui/icons';
 import { IconButton } from '@chakra-ui/react';
 import FoodSelection from './FoodSelection';
+<<<<<<< HEAD
 import DistanceBar from './DistanceBar';
+=======
+import {
+    RangeSlider,
+    RangeSliderTrack,
+    RangeSliderFilledTrack,
+    RangeSliderThumb,
+  } from '@chakra-ui/react'
+
+>>>>>>> origin/100000-ui
 
 function Setup() {
     const [tabIndex, setTabIndex] = useState(0)
@@ -51,6 +61,7 @@ function Setup() {
                     </button>
                 </div>
                 <div>
+                
                     <Tabs 
                     align="center" 
                     isFitted variant='enclosed'
@@ -78,6 +89,15 @@ function Setup() {
                             </TabPanel>
                             <TabPanel>
                             <div className='tab2'>
+                                <div className="checklist">
+                                    <RangeSlider defaultValue={[0, 3]} min={0} max={3} step={1}>
+                                        <RangeSliderTrack bg='red.100'>
+                                            <RangeSliderFilledTrack bg='tomato' />
+                                        </RangeSliderTrack>
+                                        <RangeSliderThumb index={0} />
+                                        <RangeSliderThumb index={1} />
+                                    </RangeSlider>
+                                </div>
                                 <h3>
                                     what's the price range?
                                 </h3>
