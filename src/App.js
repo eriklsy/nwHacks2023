@@ -3,10 +3,8 @@ import React from 'react';
 import Setup from './components/Setup';
 
 import FoodSelection from './components/FoodSelection';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import logo from './assets/Time.png';
-import { IconButton } from '@chakra-ui/react';
-import { ArrowRightIcon } from '@chakra-ui/icons';
 
 
 function App() {

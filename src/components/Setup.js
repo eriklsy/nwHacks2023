@@ -1,23 +1,15 @@
 import React from "react";
 import './Setup.css';
 import './FoodSelection.css';
-import { Tabs, TabList, TabPanels, Tab, TabPanel, Box, Checkbox, CheckboxGroup, Stack} from '@chakra-ui/react'
+import { Tabs, TabList, TabPanels, Tab, TabPanel, Box, Checkbox, Stack} from '@chakra-ui/react'
 import { useState } from 'react';
 import poop from './1480289-200.png';
-import { ArrowRightIcon } from '@chakra-ui/icons';
-import { IconButton } from '@chakra-ui/react';
 import FoodSelection from './FoodSelection';
 import MapContainer from "./MapEmbed";
 
-import {
-    RangeSlider,
-    RangeSliderTrack,
-    RangeSliderFilledTrack,
-    RangeSliderThumb,
-  } from '@chakra-ui/react';
 import "./DistanceBar.css"
 
-import NumEaters from "./NumEaters";
+import "./NumEaters";
 
 
 function Setup() {
@@ -45,7 +37,7 @@ function Setup() {
 
 
     const handleSliderChange = (event) => {
-        if (tabIndex != 0 ) {
+        if (tabIndex !== 0 ) {
             setTabIndex((tabIndex + 1)%4);
             console.log(tabIndex);
         } else if(tabIndex >= 3){
@@ -65,9 +57,6 @@ function Setup() {
         
     }
   
-    const handleTabsChange = (index) => {
-      setTabIndex(index);
-    }
     
     const [isShown, setIsShown] = useState(false);
     const handleClick = event => {
@@ -85,13 +74,10 @@ function Setup() {
 
 
 
-    let elementStyle = {};
-    if (!showBox) {
-    elementStyle = { display: 'none' };
-  }
-   function sendData(){
-    console.log(location)
-   }
+
+    function sendData(){
+        console.log(location)
+    }
 
     return(
         <div>
@@ -183,9 +169,9 @@ function Setup() {
                             <TabPanel>
                             <div className='tab3'>
                             <div className="container">
-                                <img class="image" src="https://cdn-icons-png.flaticon.com/512/67/67347.png"/>
+                                <img class="image" src="https://cdn-icons-png.flaticon.com/512/67/67347.png" alt="near me"/>
                                 <button class="button" onClick={handleExactLocation}>Near Me</button>
-                                <img class="image" src="https://media.wired.com/photos/59269cd37034dc5f91bec0f1/191:100/w_1280,c_limit/GoogleMapTA.jpg"/>
+                                <img class="image" src="https://media.wired.com/photos/59269cd37034dc5f91bec0f1/191:100/w_1280,c_limit/GoogleMapTA.jpg" alt="google maps"/>
                                 <button class="button" onClick={handleSliderChange}>Use Map</button>
                                 </div>
                                 <h3>
