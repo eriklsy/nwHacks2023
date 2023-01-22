@@ -77,6 +77,9 @@ function Setup() {
 
     function sendData(){
         console.log(location)
+        setIsShown(false)
+        setBoxShown(true)
+        setTabIndex(4)
     }
 
     return(
@@ -130,6 +133,11 @@ function Setup() {
                                     backgroundColor: tabIndex >= 3 ? 'white': '#0F0F0F'
                                 }} >
                                 </Tab>
+                                <Tab className='items'
+                                 style={{
+                                    backgroundColor: tabIndex >= 4 ? 'white': '#0F0F0F'
+                                }} >
+                                </Tab>
                             </div>
                         </TabList>
                         <TabPanels className="alltabs" borderRadius = "50%">
@@ -179,14 +187,14 @@ function Setup() {
                             </TabPanel>
                             <TabPanel>
                             <div className='tab3'>
-                            <div className="container">
-                                <img class="image" src="https://cdn-icons-png.flaticon.com/512/67/67347.png" alt="near me"/>
-                                <button class="button" onClick={handleExactLocation}>Near Me</button>
-                                <img class="image" src="https://media.wired.com/photos/59269cd37034dc5f91bec0f1/191:100/w_1280,c_limit/GoogleMapTA.jpg" alt="google maps"/>
-                                <button class="button" onClick={handleSliderChange}>Use Map</button>
+                                <div className="tab3container">
+                                    <img class="image" src="https://cdn-icons-png.flaticon.com/512/67/67347.png" alt="near me"/>
+                                    <button class="tab3button" onClick={handleExactLocation}>Near Me</button>
+                                    <img class="image" src="https://media.wired.com/photos/59269cd37034dc5f91bec0f1/191:100/w_1280,c_limit/GoogleMapTA.jpg" alt="google maps"/>
+                                    <button class="tab3button" onClick={handleSliderChange}>Use Map</button>
                                 </div>
                                 <h3>
-                                    where are we eating?
+                                    Where are we eating?
                                 </h3>
 
 
@@ -196,6 +204,14 @@ function Setup() {
                             <TabPanel>
                             <div className='tab4'>
                                 <MapContainer/>
+                            </div>
+                            </TabPanel>
+                            <TabPanel>
+                            <div className='tab5'>
+                                <h3>
+                                    Restaurant:
+                                </h3>
+
                             </div>
                             </TabPanel>
                         </TabPanels>

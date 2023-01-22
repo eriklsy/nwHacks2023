@@ -80,7 +80,7 @@
     color: #e8e8e8;
 }
 
-.tab2, .tab3, .tab4 {
+.tab2, .tab4 .tab5{
     margin-top: 40vh;
     font-size: 38px;
     color: #e8e8e8;
@@ -101,6 +101,22 @@
     margin-top: 15%;
     font-size: 36px;
     color: #e8e8e8;
+}
+
+.tab3container {
+    margin: 100px;
+}
+
+.tab3button {
+    width:20%;
+    text-align: center;
+    background-color: #D90429;
+    color: #e8e8e8;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    padding: 15px 20px;
+    outline: off;
 }
 
 
