@@ -7,11 +7,28 @@ import poop from './1480289-200.png';
 import { ArrowRightIcon } from '@chakra-ui/icons';
 import { IconButton } from '@chakra-ui/react';
 import FoodSelection from './FoodSelection';
-import DistanceBar from './DistanceBar';
+import './DistanceBar.css'
 
 function Setup() {
+    const[location,setLocation] = useState({});
+    function getLocation(){
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+              setLocation({
+                lat: position.coords.latitude,
+                lng: position.coords.longitude,
+                
+              });
+            },
+            (error) => console.log(error)
+          );
+    }
     const [tabIndex, setTabIndex] = useState(0)
-
+    function  handleExactLocation(){
+        setTabIndex((tabIndex+1))
+        getLocation()
+        console.log(location)
+    }
     const handleSliderChange = (event) => {
       setTabIndex((tabIndex + 1)%4);
     }
@@ -73,7 +90,7 @@ function Setup() {
                             <div className='tab1'>
                                 <h3>
                                     how many eaters?
-                                </h3>
+                                </h3>   
                             </div>
                             </TabPanel>
                             <TabPanel>
@@ -85,7 +102,12 @@ function Setup() {
                             </TabPanel>
                             <TabPanel>
                             <div className='tab3'>
-                                <DistanceBar/>
+                            <div className="container">
+                                <img class="image" src="https://cdn-icons-png.flaticon.com/512/67/67347.png"/>
+                                <button class="button" onClick={handleExactLocation}>Near Me</button>
+                                <img class="image" src="https://media.wired.com/photos/59269cd37034dc5f91bec0f1/191:100/w_1280,c_limit/GoogleMapTA.jpg"/>
+                                <button class="button">Use Map</button>
+                                </div>
                                 <h3>
                                     where are we eating?
                                 </h3>
@@ -98,6 +120,10 @@ function Setup() {
                                 
                             </div>
                             </TabPanel>
+                            <div className="tabspecial">
+
+
+                            </div>
                             <TabPanel>
                             <div className='tab4'>
                                 
@@ -110,7 +136,7 @@ function Setup() {
                 
             </Box>
             </div>
-        {isShown && <FoodSelection/>}
+        {isShown && <FoodSelection/>}   
         </div>
     );
 }
