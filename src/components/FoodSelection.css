@@ -77,3 +77,8 @@
 #nextper{
     width : 40px;
 }
+
+.button{
+    position: absolute;
+    top: 500px;
+}

@@ -6,6 +6,7 @@ import { useState } from 'react';
 import poop from './1480289-200.png';
 import FoodSelection from './FoodSelection';
 import MapContainer from "./MapEmbed";
+import value from "./FoodSelection";
 
 import "./DistanceBar.css"
 
@@ -59,10 +60,12 @@ function Setup() {
   
     
     const [isShown, setIsShown] = useState(false);
+    
     const handleClick = event => {
        console.log (isShown);
         handleBoxClick();
         setIsShown(current => !current);
+        console.log (isShown);
 
     }
 
@@ -74,18 +77,20 @@ function Setup() {
 
 
 
-
     function sendData(){
         console.log(location)
         setIsShown(false)
         setBoxShown(true)
         setTabIndex(4)
+        console.log(list)
     }
+
+    const [list, setList] = useState([]);
 
     return(
         <div>
             <div style={!showBox ? {display: 'none'} : {}}>
-            <Box id="setupbox">
+                <Box id="setupbox">
                 
             
                  <div
@@ -223,12 +228,14 @@ function Setup() {
                 </div>
                  </Box>
             </div>
-        {isShown && 
+            {isShown && 
         <div>
-            <FoodSelection/>
+            <FoodSelection onList={(l)=>setList(l)}/>
+    
             <div class="findButton">
                 <button id="find" onClick={sendData}>Find a Restaurant</button>
             </div>
+            
         </div>}
         </div>
     );
