@@ -46,9 +46,11 @@ function Setup() {
     const handleSliderChange = (event) => {
         if (tabIndex != 0 ) {
             setTabIndex((tabIndex + 1)%4);
+            console.log(tabIndex);
         } else if(tabIndex >= 3){
             console.log(showPoop);
             setPoop(false);
+            console.log(tabIndex);
         }
         
         
@@ -56,6 +58,7 @@ function Setup() {
             console.log(showPoop)
             console.log(eaters);
             setTabIndex((tabIndex + 1)%4);
+            console.log(tabIndex);
         }
         
     }
@@ -90,14 +93,18 @@ function Setup() {
             <Box id="setupbox">
             
                  <div
-                 style={{
-                    display: tabIndex >= 2 ? 'none' : 'inline'
-                 }}>
-                     <button onClick={handleSliderChange} id="next-button">
+                 >
+                     <button onClick={handleSliderChange} id="next-button"
+                     style={{
+                        display: tabIndex >= 2 ? 'none' : 'inline'
+                     }}>
                         <img src={poop} id = "arrowimg" alt="next-button"/>
                         </button>
                         </div>
-                <div>
+                <div
+                style={{
+                    display: tabIndex >= 2 ? 'none' : 'inline'
+                 }}>
                     <button onClick={handleSliderChange} id="next-button">
                         <img src={poop} id = "arrowimg"  className = "invert" alt="next button"/>
                     </button>
