@@ -40,9 +40,9 @@ function App() {
           </div>
         </div>
         
-        <div className="title">
+        {/* <div className="title">
           It's Time to Eat!
-        </div>
+        </div> */}
         
         <Setup/>
         
