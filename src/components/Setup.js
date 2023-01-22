@@ -107,7 +107,7 @@ function Setup() {
                     <Tabs 
                     align="center" 
                     isFitted variant='enclosed'
-                    onChange={handleTabsChange}
+                    
                     index={tabIndex}>
                         <TabList>
                             <div className='listof'>   
@@ -144,25 +144,25 @@ function Setup() {
                             <div className='tab2'>
                                 <div className="checklist">
                     
-                                    <Stack textAlign= "center" zIndex = {5} spacing={30} direction={'row'}>
+                                    <Stack textAlign= "center" zIndex = {5} spacing={30} direction={'row'} opacity = "90%" height = "80px">
                                         <div class = "boxList">
-                                            <Checkbox marginRight = "50px" zIndex = {2} colorScheme='red'>
+                                            <Checkbox marginTop = "13px" marginRight = "50px" zIndex = {2} colorScheme='red'>
                                                 $
                                             </Checkbox>
-                                            <Checkbox   marginRight = "50px" colorScheme='green'>
+                                            <Checkbox  marginTop = "13px"  marginRight = "50px" colorScheme='green'>
                                                 $$
                                             </Checkbox>
-                                            <Checkbox  marginRight = "50px" colorScheme='green'>
+                                            <Checkbox  marginTop = "13px"  marginRight = "50px" colorScheme='green'>
                                                 $$$
                                             </Checkbox>
-                                            <Checkbox marginRight = "auto" colorScheme='green'>
+                                            <Checkbox marginTop = "13px"  marginRight = "auto" colorScheme='green'>
                                                 $$$$
                                             </Checkbox>
                                         </div>
                                     </Stack>
                                 </div>
                                 <h3>
-                                    what's the price range?
+                                    What's the price range?
                                 </h3>
                             </div>
                             </TabPanel>
