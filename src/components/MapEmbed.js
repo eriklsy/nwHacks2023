@@ -6,17 +6,27 @@ class MapEmbed extends React.Component {
         super(props);
         this.state = {
             lat: 49.2827291,
-            lng: -123.1207375
+            lng: -123.1207375,
         };
+        this.handleClick = this.handleClick.bind(this)
     }
     handleMapClick = (event) => {
         this.setState({
             lat: event.latLng.lat(),
             lng: event.latLng.lng()
         });
+        
     }
+
+    handleClick(){
+        this.props.addValue(this.state.data)
+    }
+ 
+    
     render() {
         return (
+            <div>
+            
             <GoogleMap
                 defaultZoom={8}
                 defaultCenter={{ lat: this.state.lat, lng: this.state.lng }}
@@ -27,13 +37,16 @@ class MapEmbed extends React.Component {
                     
                 />
             </GoogleMap>
+            <h1 onClick={this.handleClick}><button >hey</button></h1>
+            </div>
         );
     }
 }
 
 const WrappedMapWithAMarker = withScriptjs(withGoogleMap(MapEmbed));
 
-function MapContainer() {
+function MapContainer(props) {
+
     return (
         <WrappedMapWithAMarker
             googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6MTpfVrCDiXw_JY5mBcd3Rjk0OdHi0VI&v=3.exp&libraries=geometry,drawing,places"

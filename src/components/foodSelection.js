@@ -220,7 +220,7 @@ function FoodSelection(){
                <p className = "fooddescription">Cafe</p>
             </div>
         </div>
-    
+        
 </div>
 );
 }

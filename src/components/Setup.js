@@ -21,6 +21,7 @@ import NumEaters from "./NumEaters";
 
 
 function Setup() {
+    
     const[location,setLocation] = useState({});
     let [eaters, setEaters] = useState(1);
     function getLocation(){
@@ -35,6 +36,7 @@ function Setup() {
             (error) => console.log(error)
           );
     }
+
     const [tabIndex, setTabIndex] = useState(0)
     function  handleExactLocation(){
         handleClick();
@@ -44,8 +46,12 @@ function Setup() {
     
     function  handleMarkerLocation(){
         handleClick();
-        setLocation()
-        console.log("need to get marker")
+        setLocation({
+            lat: 49.2827291,
+            lng: -123.1207375,
+        })
+        console.log(location)
+        
     }
 
     const handleSliderChange = (event) => {
@@ -82,7 +88,9 @@ function Setup() {
     if (!showBox) {
     elementStyle = { display: 'none' };
   }
-
+  function addValue(value){
+    setLocation(value);
+  }
     return(
         <div>
             <div style={!showBox ? {display: 'none'} : {}}>
@@ -179,8 +187,8 @@ function Setup() {
                             <div className='tab4'>
                             <button class="button" onClick={handleMarkerLocation}>Submit Marker</button>
                                 <MapContainer
-                                location = {location}
-                                setLocation = {setLocation}/>
+
+                                />
                             </div>
                             </TabPanel>
                         </TabPanels>
