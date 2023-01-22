@@ -129,17 +129,17 @@ function Setup() {
                             <div className='tab2'>
                                 <div className="checklist">
                     
-                                    <Stack zIndex = {5} spacing={35} direction='row'>
-                                    <Checkbox zIndex = {2} marginLeft = "280px" colorScheme='red' defaultChecked>
+                                    <Stack zIndex = {5} spacing={40} direction={'row'}>
+                                    <Checkbox zIndex = {2} marginLeft = "280px" colorScheme='red'>
                                         $
                                     </Checkbox>
-                                    <Checkbox colorScheme='green' defaultChecked>
+                                    <Checkbox colorScheme='green'>
                                         $$
                                     </Checkbox>
-                                    <Checkbox colorScheme='green' defaultChecked>
+                                    <Checkbox colorScheme='green'>
                                         $$$
                                     </Checkbox>
-                                    <Checkbox marginRight = "auto" colorScheme='green' defaultChecked>
+                                    <Checkbox marginRight = "auto" colorScheme='green'>
                                         $$$$
                                     </Checkbox>
                                     </Stack>
