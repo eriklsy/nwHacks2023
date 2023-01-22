@@ -1,5 +1,6 @@
 import React, { Component, useState} from 'react';
-import { Map, GoogleApiWrapper } from 'google-maps-react';
+import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
+
 import Geocode from "react-geocode";
 const mapStyles = {
   width: '25%',
@@ -13,13 +14,14 @@ export class MapContainer extends Component {
   
   }
   state ={
-    city: "vancouver",
+    city: "Vancouver",
     latitude: 49.2827291,
     longitude: -123.1207375,
+    selectedLat: 49.2827291,
   }
   componentDidMount() {
-
-    Geocode.fromAddress(this.state.city).then(
+    console.log(this.props.city)
+   /* Geocode.fromAddress(this.props.city).then(
       (response) => {
         const { lat, lng } = response.results[0].geometry.location;
        console.log(lat);
@@ -28,7 +30,7 @@ export class MapContainer extends Component {
       (error) => {
         console.error(error);
       }
-    );
+    );*/
   }
   render() {  
     return (
@@ -42,7 +44,8 @@ export class MapContainer extends Component {
             lng: this.state.longitude
           }
         }
-      />  
+      />
+    
     );
   }
 }

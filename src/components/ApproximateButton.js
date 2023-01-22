@@ -35,10 +35,10 @@ class ApproximateButton extends React.Component {
     return (
       <div>
         <button onClick={handleButton.bind(this)}>
-          click me
-          <p>{city}</p>
+          Approximate Location
           </button>
       {this.state.showMap && <MapEmbed/>}
+      <h1>{this.state.showMap && <p>Approximate Location: {city}</p>}</h1>
       </div>
     );
   }
