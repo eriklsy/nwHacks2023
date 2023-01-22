@@ -21,6 +21,10 @@ import './imageGrid.css'
 
 
 function FoodSelection(){  
+
+
+
+    
     const [listofFoods, setFood] = useState([]);
 
     const handleAddFood = (id) =>{
