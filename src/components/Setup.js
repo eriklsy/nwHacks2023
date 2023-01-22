@@ -188,10 +188,14 @@ function Setup() {
                             <TabPanel>
                             <div className='tab3'>
                                 <div className="tab3container">
-                                    <img class="image" src="https://cdn-icons-png.flaticon.com/512/67/67347.png" alt="near me"/>
-                                    <button class="tab3button" onClick={handleExactLocation}>Near Me</button>
-                                    <img class="image" src="https://media.wired.com/photos/59269cd37034dc5f91bec0f1/191:100/w_1280,c_limit/GoogleMapTA.jpg" alt="google maps"/>
-                                    <button class="tab3button" onClick={handleSliderChange}>Use Map</button>
+                                    <div className="tab3column">
+                                        <img className= "image" id="near" src="https://cdn-icons-png.flaticon.com/512/67/67347.png" alt="near me"/>
+                                        <button class="tab3button" onClick={handleExactLocation}>Near Me</button>
+                                    </div>
+                                    <div className="tab3column">
+                                        <img className="image" id="map" src="https://media.wired.com/photos/59269cd37034dc5f91bec0f1/191:100/w_1280,c_limit/GoogleMapTA.jpg" alt="google maps"/>
+                                        <button class="tab3button" onClick={handleSliderChange}>Use Map</button>
+                                    </div>
                                 </div>
                                 <h3>
                                     Where are we eating?
@@ -211,7 +215,6 @@ function Setup() {
                                 <h3>
                                     Restaurant:
                                 </h3>
-
                             </div>
                             </TabPanel>
                         </TabPanels>
