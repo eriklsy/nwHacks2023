@@ -35,6 +35,7 @@ function Setup() {
             (error) => console.log(error)
           );
     }
+    const [showPoop,setPoop] = useState(true);
     const [tabIndex, setTabIndex] = useState(0)
     function  handleExactLocation(){
         handleClick();
@@ -45,8 +46,14 @@ function Setup() {
     const handleSliderChange = (event) => {
         if (tabIndex != 0 ) {
             setTabIndex((tabIndex + 1)%4);
-        } else {
-            
+        } else if(tabIndex >= 3){
+            console.log(showPoop);
+            setPoop(false);
+        }
+        
+        
+        else {
+            console.log(showPoop)
             console.log(eaters);
             setTabIndex((tabIndex + 1)%4);
         }
@@ -56,7 +63,7 @@ function Setup() {
     const handleTabsChange = (index) => {
       setTabIndex(index);
     }
-
+    
     const [isShown, setIsShown] = useState(false);
     const handleClick = event => {
        console.log (isShown);
@@ -82,8 +89,11 @@ function Setup() {
             <div style={!showBox ? {display: 'none'} : {}}>
             <Box id="setupbox">
             
-                <div>
-                    <button onClick={handleSliderChange} id="next-button">
+                 <div
+                 style={{
+                    display: tabIndex >= 2 ? 'none' : 'inline'
+                 }}>
+                     <button onClick={handleSliderChange} id="next-button">
                         <img src={poop} id = "arrowimg" alt="next button"/>
                     </button>
                 </div>
