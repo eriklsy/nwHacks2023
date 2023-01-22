@@ -7,7 +7,7 @@ import poop from './1480289-200.png';
 import { ArrowRightIcon } from '@chakra-ui/icons';
 import { IconButton } from '@chakra-ui/react';
 import FoodSelection from './FoodSelection';
-
+import DistanceBar from './DistanceBar';
 
 function Setup() {
     const [tabIndex, setTabIndex] = useState(0)
@@ -85,6 +85,7 @@ function Setup() {
                             </TabPanel>
                             <TabPanel>
                             <div className='tab3'>
+                                <DistanceBar/>
                                 <h3>
                                     where are we eating?
                                 </h3>
