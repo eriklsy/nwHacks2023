@@ -12,14 +12,32 @@ import {
     RangeSliderTrack,
     RangeSliderFilledTrack,
     RangeSliderThumb,
-  } from '@chakra-ui/react'
-
+  } from '@chakra-ui/react';
+import "./DistanceBar.css"
 
 import NumEaters from "./NumEaters";
 
 
 function Setup() {
+    const[location,setLocation] = useState({});
+    function getLocation(){
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+              setLocation({
+                lat: position.coords.latitude,
+                lng: position.coords.longitude,
+                
+              });
+            },
+            (error) => console.log(error)
+          );
+    }
     const [tabIndex, setTabIndex] = useState(0)
+    function  handleExactLocation(){
+        setTabIndex((tabIndex+1))
+        getLocation()
+        console.log(location)
+    }
 
     const handleSliderChange = (event) => {
       setTabIndex((tabIndex + 1)%4);
@@ -56,7 +74,7 @@ function Setup() {
             
                 <div>
                     <button onClick={handleSliderChange} id="next-button">
-                        <img src={poop} alt="next button"/>
+                        <img src={poop} id = "arrowimg" alt="next button"/>
                     </button>
                 </div>
                 <div>
@@ -91,13 +109,21 @@ function Setup() {
                             <TabPanel>
                             <div className='tab2'>
                                 <div className="checklist">
-                                    <RangeSlider defaultValue={[0, 3]} min={0} max={3} step={1}>
-                                        <RangeSliderTrack bg='red.100'>
-                                            <RangeSliderFilledTrack bg='tomato' />
-                                        </RangeSliderTrack>
-                                        <RangeSliderThumb index={0} />
-                                        <RangeSliderThumb index={1} />
-                                    </RangeSlider>
+                    
+                                    <Stack zIndex = {5} spacing={35} direction='row'>
+                                    <Checkbox zIndex = {2} marginLeft = "280px" colorScheme='red' defaultChecked>
+                                        $
+                                    </Checkbox>
+                                    <Checkbox colorScheme='green' defaultChecked>
+                                        $$
+                                    </Checkbox>
+                                    <Checkbox colorScheme='green' defaultChecked>
+                                        $$$
+                                    </Checkbox>
+                                    <Checkbox marginRight = "auto" colorScheme='green' defaultChecked>
+                                        $$$$
+                                    </Checkbox>
+                                    </Stack>
                                 </div>
                                 <h3>
                                     what's the price range?
@@ -106,6 +132,12 @@ function Setup() {
                             </TabPanel>
                             <TabPanel>
                             <div className='tab3'>
+                            <div className="container">
+                                <img class="image" src="https://cdn-icons-png.flaticon.com/512/67/67347.png"/>
+                                <button class="button" onClick={handleExactLocation}>Near Me</button>
+                                <img class="image" src="https://media.wired.com/photos/59269cd37034dc5f91bec0f1/191:100/w_1280,c_limit/GoogleMapTA.jpg"/>
+                                <button class="button">Use Map</button>
+                                </div>
                                 <h3>
                                     where are we eating?
                                 </h3>

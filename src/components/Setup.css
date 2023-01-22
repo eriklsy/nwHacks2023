@@ -17,15 +17,23 @@
 
 }
 
+#arrowimg{
+    height: 80px;
+    object-fit: cover;
+    color: white;
+    fill : white;
+}
+
 #next-button{
-    margin-left: 20px;
+    margin-left: 80px;
+    margin-top : 50px;
     left: 80%;
     position: absolute;
     align: center;
-    top: 20%;
-    width: 15%;
-    height: 60%;
-    opacity: 50%;
+    top: 35%;
+    width: 0px;
+    height: 0px;
+    z-index: 0;
     background-color: #2B2D42;
     border: none;
 }
@@ -74,9 +82,11 @@
     font-size: 48px;
     color: #e8e8e8;
 }
+.tab2{
+    margin-top : 20vh;
+}
 
 .checklist {
-    position: absolute;
     margin: auto;
     background-color: #0F0F0F;
 }

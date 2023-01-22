@@ -26,7 +26,7 @@ function App() {
         
         <div className="navbar">
           <div className="firstnav">
-            <a href=""><img src={logo} alt="logo" /></a>
+            <a href=""><img src={logo} id = "logo" alt="logo" /></a>
           </div>
           
           
