@@ -1,24 +1,36 @@
 import React, { Component, useState} from 'react';
 import { Map, GoogleApiWrapper } from 'google-maps-react';
-
+import Geocode from "react-geocode";
 const mapStyles = {
-  width: '100%',
-  height: '50%'
+  width: '25%',
+  height: '85%'
 };
-const latitude = 49.2606;
-const longitude = 123.2460;
+Geocode.setApiKey("AIzaSyA6MTpfVrCDiXw_JY5mBcd3Rjk0OdHi0VI");
+
 export class MapContainer extends Component {
-  componentDidMount() {
-    navigator.geolocation.getCurrentPosition(
-      function(position) {
-      latitude = position.coords.latitude;
-      longitude = position.coords.longitude
-    },
-    function(error){
-      console.error("Error code =" +error.code +  error.msesage);
-    });
+  constructor(props){
+    super(props);
+  
   }
-  render() {
+  state ={
+    city: "vancouver",
+    latitude: 49.2827291,
+    longitude: -123.1207375,
+  }
+  componentDidMount() {
+
+    Geocode.fromAddress(this.state.city).then(
+      (response) => {
+        const { lat, lng } = response.results[0].geometry.location;
+       console.log(lat);
+       console.log(lng);
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+  }
+  render() {  
     return (
       <Map
         google={this.props.google}
@@ -26,8 +38,8 @@ export class MapContainer extends Component {
         style={mapStyles}
         initialCenter={
           {
-            lat: latitude,
-            lng: longitude
+            lat: this.state.latitude,
+            lng: this.state.longitude
           }
         }
       />  

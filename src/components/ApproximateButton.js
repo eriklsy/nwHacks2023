@@ -1,10 +1,11 @@
 import React from "react";
-
+import MapEmbed from './MapEmbed'
 class ApproximateButton extends React.Component {
   state = {
     isLoading: true,
     location: [],
-    error: null
+    error: null,
+    showMap: false,
   };
 
   fetchIpLocation() {
@@ -23,19 +24,21 @@ class ApproximateButton extends React.Component {
     this.fetchIpLocation();
   }
   render() {
-    
     function handleButton(){
-
-      console.log(location.city);
+      this.setState({
+        showMap:true,
+      })
+      console.log(this.state);
     }
     const { isLoading, location, error } = this.state;
+    const city = location.city;
     return (
       <div>
-        <button onClick={handleButton}>
+        <button onClick={handleButton.bind(this)}>
           click me
+          <p>{city}</p>
           </button>
-          <div>{JSON.stringify(location, null, 2)}</div>
-
+      {this.state.showMap && <MapEmbed/>}
       </div>
     );
   }
