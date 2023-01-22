@@ -24,6 +24,7 @@ class MapEmbed extends React.Component {
             >
                 <Marker
                     position={{ lat: this.state.lat, lng: this.state.lng }}
+                    
                 />
             </GoogleMap>
         );

@@ -41,6 +41,12 @@ function Setup() {
         getLocation()
         console.log(location)
     }
+    
+    function  handleMarkerLocation(){
+        handleClick();
+        setLocation()
+        console.log("need to get marker")
+    }
 
     const handleSliderChange = (event) => {
         if (tabIndex != 0 ) {
@@ -171,7 +177,10 @@ function Setup() {
                             </TabPanel>
                             <TabPanel>
                             <div className='tab4'>
-                                <MapContainer/>
+                            <button class="button" onClick={handleMarkerLocation}>Submit Marker</button>
+                                <MapContainer
+                                location = {location}
+                                setLocation = {setLocation}/>
                             </div>
                             </TabPanel>
                         </TabPanels>
