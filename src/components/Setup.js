@@ -20,6 +20,7 @@ import NumEaters from "./NumEaters";
 
 function Setup() {
     const[location,setLocation] = useState({});
+    let [eaters, setEaters] = useState(1);
     function getLocation(){
         navigator.geolocation.getCurrentPosition(
             (position) => {
@@ -34,13 +35,20 @@ function Setup() {
     }
     const [tabIndex, setTabIndex] = useState(0)
     function  handleExactLocation(){
-        setTabIndex((tabIndex+1))
+        handleClick();
         getLocation()
         console.log(location)
     }
 
     const handleSliderChange = (event) => {
-      setTabIndex((tabIndex + 1)%4);
+        if (tabIndex != 0 ) {
+            setTabIndex((tabIndex + 1)%4);
+        } else {
+            
+            console.log(eaters);
+            setTabIndex((tabIndex + 1)%4);
+        }
+        
     }
   
     const handleTabsChange = (index) => {
@@ -101,7 +109,16 @@ function Setup() {
                             <div className='tab1'>
                                 
                                 <h3>
-                                <NumEaters/>
+                                        <p>
+                                        
+                                        <input
+                                        type="number"
+                                        min="1"
+                                        pattern="[0-9]*"
+                                            value={eaters}
+                                            onChange={e => setEaters(e.target.value)}
+                                        />
+                                        </p>
                                     how many eaters?
                                 </h3>
                             </div>
