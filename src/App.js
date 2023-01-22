@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { createContext } from 'react';
+import SubUserComp from './components/subUserForm';
 
 const MyContext = React.createContext();
 
@@ -13,6 +14,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
+          <SubUserComp/>
         </p>
         <a
           className="App-link"
