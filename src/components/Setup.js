@@ -7,7 +7,11 @@ import poop from './1480289-200.png';
 import { ArrowRightIcon } from '@chakra-ui/icons';
 import { IconButton } from '@chakra-ui/react';
 import FoodSelection from './FoodSelection';
+
+import NumEaters from "./NumEaters";
+
 import DistanceBar from './DistanceBar';
+
 
 function Setup() {
     const [tabIndex, setTabIndex] = useState(0)
@@ -71,7 +75,9 @@ function Setup() {
                         <TabPanels className="alltabs">
                             <TabPanel>
                             <div className='tab1'>
+                                
                                 <h3>
+                                <NumEaters/>
                                     how many eaters?
                                 </h3>
                             </div>

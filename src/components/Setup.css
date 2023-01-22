@@ -63,7 +63,13 @@
     color: #e8e8e8;
 }
 
-.tab1, .tab2, .tab3, .tab4 {
+.tab1 {
+    margin-top: 0vh;
+    font-size: 48px;
+    color: #e8e8e8;
+}
+
+.tab2, .tab3, .tab4 {
     margin-top: 40vh;
     font-size: 48px;
     color: #e8e8e8;
