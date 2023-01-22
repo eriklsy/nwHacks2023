@@ -82,7 +82,7 @@ function Setup() {
             
                 <div>
                     <button onClick={handleSliderChange} id="next-button">
-                        <img src={poop} id = "arrowimg" alt="next button"/>
+                        <img src={poop} id = "arrowimg"  className = "invert" alt="next button"/>
                     </button>
                 </div>
                 <div>
@@ -104,13 +104,13 @@ function Setup() {
                                 </Tab>
                             </div>
                         </TabList>
-                        <TabPanels className="alltabs">
-                            <TabPanel>
-                            <div className='tab1'>
+                        <TabPanels className="alltabs" borderRadius = "50%">
+                            <TabPanel borderRadius = "50%" marginBottom = "-10px">
+                            <div className='tab1' >
                                 
-                                <h3>
-                                        <p>
-                                        
+                                <h3 class = "inputArea">
+                                        <p id = "numberDial">
+
                                         <input
                                         type="number"
                                         min="1"
@@ -127,19 +127,21 @@ function Setup() {
                             <div className='tab2'>
                                 <div className="checklist">
                     
-                                    <Stack zIndex = {5} spacing={40} direction={'row'}>
-                                    <Checkbox zIndex = {2} marginLeft = "280px" colorScheme='red'>
-                                        $
-                                    </Checkbox>
-                                    <Checkbox colorScheme='green'>
-                                        $$
-                                    </Checkbox>
-                                    <Checkbox colorScheme='green'>
-                                        $$$
-                                    </Checkbox>
-                                    <Checkbox marginRight = "auto" colorScheme='green'>
-                                        $$$$
-                                    </Checkbox>
+                                    <Stack textAlign= "center" zIndex = {5} spacing={30} direction={'row'}>
+                                        <div class = "boxList">
+                                            <Checkbox marginRight = "50px" zIndex = {2} colorScheme='red'>
+                                                $
+                                            </Checkbox>
+                                            <Checkbox   marginRight = "50px" colorScheme='green'>
+                                                $$
+                                            </Checkbox>
+                                            <Checkbox  marginRight = "50px" colorScheme='green'>
+                                                $$$
+                                            </Checkbox>
+                                            <Checkbox marginRight = "auto" colorScheme='green'>
+                                                $$$$
+                                            </Checkbox>
+                                        </div>
                                     </Stack>
                                 </div>
                                 <h3>
