@@ -46,11 +46,7 @@ function App() {
         
         <Setup/>
         
-        <IconButton onClick={function() {handleClick()}} className="finalBtn"
-                            colorScheme='blue'
-                            aria-label='Search database'
-                            size='lg'
-                            icon={<ArrowRightIcon/>}/>
+        
 
         
         

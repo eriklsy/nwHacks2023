@@ -12,6 +12,8 @@ import japanese from './pics/japanese.jpg';
 import korean from './pics/korean.jpg';
 import viet from './pics/viet.jpg';
 import burger from './pics/burger.jpg';
+import { useState } from 'react';
+import { Button, ButtonGroup } from '@chakra-ui/react';
 
 
 
@@ -63,22 +65,36 @@ function cafeHandler(){
     user.push("cafe");
     console.log(user);
 }
+  
+
+
 
 let user = [];
 function FoodSelection() {
+    const [isClicked, setIsClicked] = useState(false);
+    const handleClick = () => {
+        setIsClicked(!isClicked);
+    }
+
+
     let user = [];
     console.log(user);
     return(
         <div className="main">
+            <Button marginLeft = "200px" width = "100px" marginTop = "170px" marginBottom = "-240px" colorScheme='blue'>Next Person</Button>
 
             <div className="row1">
-                <div className = "categ">
-                    <img src = {idc} className="itemselection" onClick={idcHandler()}/>
+                <div className = "categ" >
+                    <img src = {idc} className="itemselection" onClick={idcHandler()} className={isClicked ? 'clicked' : 'itemselection'} 
+                    onClick={handleClick}/>
+                    
                     <p className = "fooddescription">I'm feeling lucky</p>
                 </div>
 
                 <div className = "categ">
-                    <img src = {chinese} className="itemselection" onClick={chineseHandler()}/>
+                
+                    <img src = {chinese} className="itemselection" onClick={idcHandler()} 
+                    />
                     <p className = "fooddescription">Chinese</p>
                 </div>
                 
@@ -90,16 +106,19 @@ function FoodSelection() {
 
             <div className="row2">
                 <div className = "categ">
+           
                     <img src = {korean} className="itemselection" onClick={koreanHandler()}/>
                     <p className = "fooddescription">Korean</p>
                 </div>
 
                 <div className = "categ">
+                
                     <img src = {japanese} class="itemselection" onClick={japaneseHandler()}/>
                     <p className = "fooddescription">Japanese</p>
                 </div>
 
                 <div className="categ">
+                
                     <img src = {indian} class="itemselection" onClick={indianHandler()}/>
                     <p className = "fooddescription">Indian</p>
                 </div>
@@ -107,14 +126,17 @@ function FoodSelection() {
 
             <div class="row3">
                 <div className = "categ">
+                
                     <img src = {viet} class="itemselection" onClick={vietnameseHandler()}/>
                     <p className = "fooddescription">Vietnamese</p>
                 </div>
                 <div className = "categ">
+                
                     <img src = {casual} class="itemselection" onClick={casualHandler()}/>
                     <p className = "fooddescription">Casual Dining</p>
                 </div>
                 <div className = "categ">
+                
                     <img src = {italian} class="itemselection" onClick={italianHandler()}/>
                     <p className= "fooddescription">Italian</p>
                 </div>
@@ -122,14 +144,17 @@ function FoodSelection() {
 
             <div class="row4">
                 <div className = "categ">
+                
                     <img src = {burger} class="itemselection" onClick={burgerHandler()}/>
                     <p className = "fooddescription">Burger</p>
                 </div>
                 <div className = "categ">
+                
                     <img src = {brunch} class="itemselection" onClick={brunchHandler()}/>
                     <p className = "fooddescription">Brunch</p>
                 </div>
                 <div className = "categ">
+                
                    <img src = {cafe} class="itemselection" onClick={cafeHandler()}/>
                    <p className = "fooddescription">Cafe</p>
                 </div>

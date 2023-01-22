@@ -1,4 +1,4 @@
-.itemselection{
+.itemselection, .clicked{
     width: 25vw;
     height: 25vw;
     background-color: black;
@@ -54,14 +54,27 @@
     margin-top: 60vh;
 }
 
+
 #chinese{
     left: 37.5vw;
 }
 
 #idc{
     left: 67.5vw;
+
 }
+
+.clicked{
+    outline-style: solid;
+    outline-width: 10px;
+    outline-color : #D90429;
+}
+
 
 #fast{
     left: 7.5vw;
+}
+
+#nextper{
+    width : 40px;
 }
