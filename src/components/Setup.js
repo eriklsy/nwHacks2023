@@ -6,6 +6,7 @@ import { useState } from 'react';
 import poop from './1480289-200.png';
 import FoodSelection from './FoodSelection';
 import MapContainer from "./MapEmbed";
+import { MapEmbed } from "./MapEmbed";
 
 import "./DistanceBar.css"
 
@@ -35,6 +36,17 @@ function Setup() {
         console.log(location)
     }
 
+    window.onSelectMarker=(markerLocation) =>{
+        setLocation(markerLocation);
+        console.log(location)
+        console.log(markerLocation)
+    }
+
+    function  submitLocation(){
+        handleClick();
+
+        console.log(location)
+    }
 
     const handleSliderChange = (event) => {
         if (tabIndex !== 0 ) {
@@ -72,7 +84,7 @@ function Setup() {
         setBoxShown(current => !current);
     }
 
-
+   
 
 
     function sendData(){
@@ -208,6 +220,7 @@ function Setup() {
                             <TabPanel>
                             <div className='tab4'>
                                 <MapContainer/>
+                                <button class="tab3button" onClick={submitLocation} >Select Location</button>
                             </div>
                             </TabPanel>
                             <TabPanel>
