@@ -19,6 +19,7 @@ function App() {
     
   return (
     <div className="App">
+
       
       <img id="backgroundImg" src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="background-img"/>
       
@@ -57,6 +58,7 @@ function App() {
         
       </div>
       {isShown && <FoodSelection/>}
+
     </div>
   );
 }
