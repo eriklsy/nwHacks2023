@@ -118,13 +118,21 @@ function Setup() {
                     index={tabIndex}>
                         <TabList>
                             <div className='listof'>   
-                                <Tab className="items">
+                                <Tab className="items" style={{
+                                    backgroundColor :tabIndex >= 0 ? 'white':'#0F0F0F'
+                                }}>
                                 </Tab>
-                                <Tab className='items'>
+                                <Tab className='items' style={{
+                                    backgroundColor: tabIndex >= 1 ? 'white': '#0F0F0F'
+                                }}>
                                 </Tab>
-                                <Tab className='items'>
+                                <Tab className='items' style={{
+                                    backgroundColor: tabIndex >= 2 ? 'white':'#0F0F0F'
+                                }}>
                                 </Tab>
-                                <Tab className='items'>
+                                <Tab className='items' style={{
+                                    backgroundColor: tabIndex >= 3? 'white':'#0F0F0F"'
+                                }}>
                                 </Tab>
                             </div>
                         </TabList>
