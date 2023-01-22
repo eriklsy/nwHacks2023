@@ -14,7 +14,10 @@ const imgpath = "./images/"
 
 
 class SubUserComp extends Component {
+  
+  
   state = {
+    formData: [],
     checkboxes: OPTIONS.reduce(
       (options, option) => ({
         ...options,
@@ -23,6 +26,8 @@ class SubUserComp extends Component {
       {}
     )
   };
+
+  
 
   selectAllCheckboxes = isSelected => {
     Object.keys(this.state.checkboxes).forEach(checkbox => {
@@ -57,11 +62,17 @@ class SubUserComp extends Component {
     //! this is where the form data gets outputted
     Object.keys(this.state.checkboxes)
       .filter(checkbox => this.state.checkboxes[checkbox])
+      
+  
+
       .forEach(checkbox => {
         console.log(checkbox, "is selected.");
         // add into array
-
+        
       },
+     //return this
+     
+      console.log(this.state.checkboxes)
       
       );
       this.value=null;
