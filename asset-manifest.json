@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/nwHacks2023/static/css/main.8ecdbfad.css",
-    "main.js": "/nwHacks2023/static/js/main.f834e3d5.js",
+    "main.css": "/nwHacks2023/static/css/main.ac4e53ad.css",
+    "main.js": "/nwHacks2023/static/js/main.3b8c7840.js",
     "static/js/787.6e0d5f37.chunk.js": "/nwHacks2023/static/js/787.6e0d5f37.chunk.js",
     "static/media/brunch.jpg": "/nwHacks2023/static/media/brunch.c589898f72aff97fe381.jpg",
     "static/media/cafe.jpg": "/nwHacks2023/static/media/cafe.040f47f41d734982fed6.jpg",
@@ -17,12 +17,12 @@
     "static/media/burger.jpg": "/nwHacks2023/static/media/burger.c5210b3aa31d01432839.jpg",
     "static/media/Time.png": "/nwHacks2023/static/media/Time.17a28511486c08fb8fbd.png",
     "index.html": "/nwHacks2023/index.html",
-    "main.8ecdbfad.css.map": "/nwHacks2023/static/css/main.8ecdbfad.css.map",
-    "main.f834e3d5.js.map": "/nwHacks2023/static/js/main.f834e3d5.js.map",
+    "main.ac4e53ad.css.map": "/nwHacks2023/static/css/main.ac4e53ad.css.map",
+    "main.3b8c7840.js.map": "/nwHacks2023/static/js/main.3b8c7840.js.map",
     "787.6e0d5f37.chunk.js.map": "/nwHacks2023/static/js/787.6e0d5f37.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8ecdbfad.css",
-    "static/js/main.f834e3d5.js"
+    "static/css/main.ac4e53ad.css",
+    "static/js/main.3b8c7840.js"
   ]
 }
