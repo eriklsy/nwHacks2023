@@ -105,10 +105,10 @@
 
 .finalBtn{
   margin-left: 40px;
-  left: 90%;
+  left: 40%;
   position: absolute;
-  top:85%;
   height: 8%;
+  bottom: -100px;
   background-size: 0;
   border-radius: 30%;
 }

@@ -30,6 +30,7 @@ function Setup() {
 
 
     return(
+        <div>
         <Box id="setupbox">
             <div>
                 <button onClick={handleSliderChange} id="next-button">
@@ -79,7 +80,8 @@ function Setup() {
                                 aria-label='Search database'
                                 size='lg'
                                 icon={<ArrowRightIcon/>}/>
-                            {isShown && <FoodSelection/>}
+
+                            
                         </div>
                         </TabPanel>
                         <TabPanel>
@@ -89,8 +91,12 @@ function Setup() {
                         </TabPanel>
                     </TabPanels>
                 </Tabs>
+                
             </div>
+            
         </Box>
+        {isShown && <FoodSelection/>}
+        </div>
     );
 }
 
